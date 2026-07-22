@@ -8,6 +8,9 @@
   // Declared here rather than only in the dashboard so deploys are
   // reproducible; requires the martinsundal.no zone on this account.
   "routes": [{ "pattern": "ntnu-mcp.martinsundal.no", "custom_domain": true }],
+  // Workers Logs (invocation logs + console output + errors in the dashboard).
+  // Free plan: 200k events/day, ~3-day retention, no overage billing possible.
+  "observability": { "enabled": true },
   // The installed `agents` SDK (0.2.35) statically pulls in a dynamic
   // `import("ai")` from an unrelated AI-SDK-chat-client code path inside
   // `agents/mcp` (see shims/ai-stub.ts for the full story). `ai` is not a
