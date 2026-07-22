@@ -9,6 +9,7 @@ import { bestName } from "ntnu-api";
 import type { ToolDeps } from "./deps.js";
 import { UpstreamError } from "./deps.js";
 import { gradeTables } from "./shaping.js";
+import { cachedGrades, cachedSearch, cachedTimetable } from "./upstream.js";
 
 const WEEKLY_HOURS_NOTE =
   "weekly_teaching_hours sums every listed group; students typically attend one lab group.";
@@ -70,14 +71,14 @@ function dedupeCodes(rawCodes: string[]): string[] {
 
 async function compareOne(deps: ToolDeps, code: string, year: number): Promise<object> {
   let searchHit:
-    | Awaited<ReturnType<ToolDeps["client"]["courses"]["search"]>>["courses"][number]
+    | Awaited<ReturnType<typeof cachedSearch>>["courses"][number]
     | undefined;
-  let timetable: Awaited<ReturnType<ToolDeps["client"]["courses"]["timetable"]>> = [];
+  let timetable: Awaited<ReturnType<typeof cachedTimetable>> = [];
 
   try {
-    const page = await deps.client.courses.search(year, code);
+    const page = await cachedSearch(deps, year, code);
     searchHit = page.courses.find((hit) => hit.courseCode.toUpperCase() === code);
-    timetable = await deps.client.courses.timetable(code, year);
+    timetable = await cachedTimetable(deps, code, year);
   } catch (err) {
     throw new UpstreamError(`NTNU comparison request failed: ${(err as Error).message}`);
   }
@@ -97,9 +98,9 @@ async function compareOne(deps: ToolDeps, code: string, year: number): Promise<o
   const englishName = timetable[0] ? bestName(timetable[0].courseName) : null;
   const weeklyTeachingHours = timetable.length > 0 ? round1(sumWeeklyHours(timetable)) : null;
 
-  let gradeRows: Awaited<ReturnType<ToolDeps["client"]["grades"]["distribution"]>> = [];
+  let gradeRows: Awaited<ReturnType<typeof cachedGrades>> = [];
   try {
-    gradeRows = await deps.client.grades.distribution(code);
+    gradeRows = await cachedGrades(deps, code);
   } catch (err) {
     throw new UpstreamError(`NTNU comparison request failed: ${(err as Error).message}`);
   }
@@ -117,9 +118,7 @@ async function compareOne(deps: ToolDeps, code: string, year: number): Promise<o
 }
 
 /** Sums (end - start) in hours across every listed timetable slot (all groups, unfiltered). */
-function sumWeeklyHours(
-  entries: Awaited<ReturnType<ToolDeps["client"]["courses"]["timetable"]>>,
-): number {
+function sumWeeklyHours(entries: Awaited<ReturnType<typeof cachedTimetable>>): number {
   let totalMinutes = 0;
   for (const entry of entries) {
     totalMinutes += toMinutes(entry.endTime) - toMinutes(entry.startTime);

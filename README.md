@@ -43,6 +43,13 @@ into per-term distribution tables, and guidance notes on empty results. This
 layering is set out in `ntnu-api`'s
 [TypeScript migration spec](https://github.com/MartinSA04/ntnu-api/blob/main/docs/ts-migration-spec.md).
 
+To keep load on NTNU's servers minimal, every upstream call is cached in two
+tiers (per-isolate memory in front of a shared Workers KV namespace), so each
+resource is fetched roughly once per TTL globally: catalog searches,
+timetables, and schedules for 1 hour; grade statistics and the semester list
+for 24 hours. KV failures degrade to memory-only caching, never to tool
+errors. In tests the cache runs memory-only.
+
 ## Local development
 
 Requires Node 22 (pinned via [mise](https://mise.jdx.dev/)).

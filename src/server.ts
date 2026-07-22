@@ -1,7 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { McpAgent } from "agents/mcp";
 import { NTNUClient } from "ntnu-api";
-import { TTLCache } from "./cache.js";
+import { type KVCacheBinding, TieredCache, TTLCache } from "./cache.js";
 import type { ToolDeps } from "./deps.js";
 // `registerTools` lives in `./mcp-tools.ts`, which has zero static dependency
 // on `agents/mcp` — see that file's header comment for why. Re-exported here
@@ -25,10 +25,13 @@ const INSTRUCTIONS =
   "when choosing between them, and check_timetable_conflicts to catch " +
   "schedule and exam clashes before registering.";
 
-/** Module-level singletons shared per isolate. */
+/**
+ * Module-level singletons shared per isolate. The memory cache tier is
+ * shared across every Durable Object instance in the isolate; the KV tier
+ * (bound per-request env, wired up in `init`) is shared globally.
+ */
 const client = new NTNUClient();
-const cache = new TTLCache();
-const deps: ToolDeps = { client, cache };
+const memoryCache = new TTLCache();
 
 export class NtnuMcp extends McpAgent {
   // `agents` bundles its own nested `@modelcontextprotocol/sdk@1.23.0`, distinct
@@ -45,6 +48,13 @@ export class NtnuMcp extends McpAgent {
   ) as unknown as McpAgent["server"];
 
   async init(): Promise<void> {
+    // `env` exists on every Durable Object instance at runtime, but the
+    // installed agents SDK's .d.ts chain doesn't surface it as a property
+    // (it only appears as a constructor parameter), so go through a
+    // structural cast — same story as the `server` field above. The CACHE
+    // binding is declared in wrangler.jsonc; absent binding → memory-only.
+    const kv = (this as unknown as { env?: { CACHE?: KVCacheBinding } }).env?.CACHE;
+    const deps: ToolDeps = { client, cache: new TieredCache(memoryCache, kv) };
     registerTools(this.server as unknown as McpServer, deps);
   }
 }

@@ -11,10 +11,17 @@
  */
 
 import { bestName, NTNUAPIError } from "ntnu-api";
-import { SEARCH_CACHE_TTL_MS, SEMESTERS_CACHE_TTL_MS } from "./cache.js";
+import { SEMESTERS_CACHE_TTL_MS } from "./cache.js";
 import type { ToolDeps } from "./deps.js";
 import { UpstreamError } from "./deps.js";
 import { gradeTables, shapeActivity, shapeSlot } from "./shaping.js";
+import {
+  cachedCourseVersions,
+  cachedGrades,
+  cachedSchedules,
+  cachedSearch,
+  cachedTimetable,
+} from "./upstream.js";
 
 /** Max courses returned per `search_courses` call (ports `SEARCH_RESULT_LIMIT`). */
 export const SEARCH_RESULT_LIMIT = 50;
@@ -32,40 +39,36 @@ export async function searchCourses(
 ): Promise<object> {
   const query = args.query ?? null;
   const page = args.page ?? 1;
-  const key = JSON.stringify(["search", args.year, query, page]);
-  let result = deps.cache.get(key, SEARCH_CACHE_TTL_MS) as object | null;
-  if (result === null) {
-    let pageData: Awaited<ReturnType<ToolDeps["client"]["courses"]["search"]>>;
-    try {
-      pageData = await deps.client.courses.search(args.year, query, { page });
-    } catch (exc) {
-      if (exc instanceof NTNUAPIError) {
-        throw new UpstreamError(`NTNU catalog request failed: ${exc.message}`);
-      }
-      throw exc;
+  // Caching happens in `cachedSearch` (upstream level), so the raw page is
+  // reusable by compare_courses/check_timetable_conflicts; shaping re-runs.
+  let pageData: Awaited<ReturnType<typeof cachedSearch>>;
+  try {
+    pageData = await cachedSearch(deps, args.year, query, page);
+  } catch (exc) {
+    if (exc instanceof NTNUAPIError) {
+      throw new UpstreamError(`NTNU catalog request failed: ${exc.message}`);
     }
-    const hits = pageData.courses.slice(0, SEARCH_RESULT_LIMIT);
-    const shaped: Record<string, unknown> = {
-      num_found: pageData.numFound,
-      page,
-      has_more_pages: pageData.hasMoreResults,
-      showing: hits.length,
-      courses: hits.map((hit) => ({
-        code: hit.courseCode,
-        name: hit.courseName,
-        campus: hit.location,
-        exams: hit.exams.map((e) => ({ date: e.date ?? null, season: e.season })),
-      })),
-    };
-    if (pageData.courses.length > SEARCH_RESULT_LIMIT) {
-      shaped.note =
-        `Showing first ${SEARCH_RESULT_LIMIT} of ${pageData.courses.length} results on ` +
-        "this page; narrow the query or request a later page.";
-    }
-    result = shaped;
-    deps.cache.set(key, result);
+    throw exc;
   }
-  return result;
+  const hits = pageData.courses.slice(0, SEARCH_RESULT_LIMIT);
+  const shaped: Record<string, unknown> = {
+    num_found: pageData.numFound,
+    page,
+    has_more_pages: pageData.hasMoreResults,
+    showing: hits.length,
+    courses: hits.map((hit) => ({
+      code: hit.courseCode,
+      name: hit.courseName,
+      campus: hit.location,
+      exams: hit.exams.map((e) => ({ date: e.date ?? null, season: e.season })),
+    })),
+  };
+  if (pageData.courses.length > SEARCH_RESULT_LIMIT) {
+    shaped.note =
+      `Showing first ${SEARCH_RESULT_LIMIT} of ${pageData.courses.length} results on ` +
+      "this page; narrow the query or request a later page.";
+  }
+  return shaped;
 }
 
 /**
@@ -77,9 +80,9 @@ export async function getCourseSchedule(
   deps: ToolDeps,
   args: { course_code: string; year: number },
 ): Promise<object> {
-  let activities: Awaited<ReturnType<ToolDeps["client"]["courses"]["schedules"]>>;
+  let activities: Awaited<ReturnType<typeof cachedSchedules>>;
   try {
-    activities = await deps.client.courses.schedules(args.course_code, args.year);
+    activities = await cachedSchedules(deps, args.course_code, args.year);
   } catch (exc) {
     if (exc instanceof NTNUAPIError) {
       throw new UpstreamError(`NTNU schedule request failed: ${exc.message}`);
@@ -120,9 +123,9 @@ export async function getWeeklyTimetable(
   deps: ToolDeps,
   args: { course_code: string; year: number },
 ): Promise<object> {
-  let entries: Awaited<ReturnType<ToolDeps["client"]["courses"]["timetable"]>>;
+  let entries: Awaited<ReturnType<typeof cachedTimetable>>;
   try {
-    entries = await deps.client.courses.timetable(args.course_code, args.year);
+    entries = await cachedTimetable(deps, args.course_code, args.year);
   } catch (exc) {
     if (exc instanceof NTNUAPIError) {
       throw new UpstreamError(`NTNU timetable request failed: ${exc.message}`);
@@ -167,12 +170,9 @@ export async function getGradeDistribution(
   deps: ToolDeps,
   args: { course_code: string; years?: number[] | null },
 ): Promise<object> {
-  let rows: Awaited<ReturnType<ToolDeps["client"]["grades"]["distribution"]>>;
+  let rows: Awaited<ReturnType<typeof cachedGrades>>;
   try {
-    rows = await deps.client.grades.distribution(
-      args.course_code,
-      args.years ? { years: args.years } : undefined,
-    );
+    rows = await cachedGrades(deps, args.course_code, args.years);
   } catch (exc) {
     if (exc instanceof NTNUAPIError) {
       throw new UpstreamError(`DBH grade statistics request failed: ${exc.message}`);
@@ -199,9 +199,9 @@ export async function getCourseVersions(
   deps: ToolDeps,
   args: { course_code: string },
 ): Promise<object> {
-  let versions: Awaited<ReturnType<ToolDeps["client"]["grades"]["courseVersions"]>>;
+  let versions: Awaited<ReturnType<typeof cachedCourseVersions>>;
   try {
-    versions = await deps.client.grades.courseVersions(args.course_code);
+    versions = await cachedCourseVersions(deps, args.course_code);
   } catch (exc) {
     if (exc instanceof NTNUAPIError) {
       throw new UpstreamError(`DBH request failed: ${exc.message}`);
@@ -217,7 +217,7 @@ export async function getCourseVersions(
  */
 export async function getSemesters(deps: ToolDeps): Promise<object> {
   const key = "semesters";
-  let result = deps.cache.get(key, SEMESTERS_CACHE_TTL_MS) as object | null;
+  let result = (await deps.cache.get(key, SEMESTERS_CACHE_TTL_MS)) as object | null;
   if (result === null) {
     let semesters: Awaited<ReturnType<ToolDeps["client"]["semesters"]["all"]>>;
     let current: Awaited<ReturnType<ToolDeps["client"]["semesters"]["current"]>>;
@@ -247,7 +247,7 @@ export async function getSemesters(deps: ToolDeps): Promise<object> {
         exams_until: s.examLastDate ?? null,
       })),
     };
-    deps.cache.set(key, result);
+    await deps.cache.set(key, result, SEMESTERS_CACHE_TTL_MS);
   }
   return result;
 }

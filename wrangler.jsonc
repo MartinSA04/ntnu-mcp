@@ -11,6 +11,17 @@
   // Workers Logs (invocation logs + console output + errors in the dashboard).
   // Free plan: 200k events/day, ~3-day retention, no overage billing possible.
   "observability": { "enabled": true },
+  // Shared cache tier (see src/cache.ts TieredCache): fetched-once-per-TTL
+  // globally instead of per-isolate, to minimize load on NTNU's servers.
+  // Free plan: 100k reads / 1k writes per day — orders of magnitude above
+  // this worker's traffic; on quota exhaustion the cache degrades to
+  // memory-only, it never breaks tools.
+  "kv_namespaces": [
+    {
+      "binding": "CACHE",
+      "id": "6d45477b395340f0943d39d925a4cf85"
+    }
+  ],
   // The installed `agents` SDK (0.2.35) statically pulls in a dynamic
   // `import("ai")` from an unrelated AI-SDK-chat-client code path inside
   // `agents/mcp` (see shims/ai-stub.ts for the full story). `ai` is not a

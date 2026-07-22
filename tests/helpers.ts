@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Fetch } from "ntnu-api";
 import { NTNUClient } from "ntnu-api";
-import { TTLCache } from "../src/cache.js";
+import { TieredCache } from "../src/cache.js";
 import type { ToolDeps } from "../src/deps.js";
 
 const FIXTURES_DIR = fileURLToPath(new URL("./fixtures/", import.meta.url));
@@ -75,9 +75,9 @@ export function sequenceFetch(responses: Response[]): { fetch: Fetch; calls: Fet
 
 const noopSleep = async (_ms: number): Promise<void> => {};
 
-/** Builds `ToolDeps` wired to a fixture-backed `NTNUClient` and a fresh `TTLCache`. */
+/** Builds `ToolDeps` wired to a fixture-backed `NTNUClient` and a fresh memory-only cache. */
 export function makeDeps(fetchImpl: Fetch, now?: () => Date): ToolDeps {
   const client = new NTNUClient({ fetch: fetchImpl, sleep: noopSleep });
-  const cache = new TTLCache();
+  const cache = new TieredCache();
   return now ? { client, cache, now } : { client, cache };
 }

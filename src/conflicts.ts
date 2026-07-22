@@ -11,6 +11,7 @@ import { weekNumbers } from "ntnu-api";
 import type { ToolDeps } from "./deps.js";
 import { UpstreamError } from "./deps.js";
 import { DAY_NAMES } from "./shaping.js";
+import { cachedSearch, cachedTimetable } from "./upstream.js";
 
 const LAB_NOTE =
   "Lab/exercise slots often have alternative groups, so timetable overlaps involving them may be avoidable.";
@@ -147,7 +148,7 @@ export async function checkTimetableConflicts(
   for (const code of codes) {
     let entries: TimetableEntry[];
     try {
-      entries = await deps.client.courses.timetable(code, args.year);
+      entries = await cachedTimetable(deps, code, args.year);
     } catch (err) {
       throw new UpstreamError(`NTNU timetable request failed: ${(err as Error).message}`);
     }
@@ -185,9 +186,9 @@ export async function checkTimetableConflicts(
 
   const examsByDate = new Map<string, Set<string>>();
   for (const code of codes) {
-    let page: Awaited<ReturnType<ToolDeps["client"]["courses"]["search"]>>;
+    let page: Awaited<ReturnType<typeof cachedSearch>>;
     try {
-      page = await deps.client.courses.search(args.year, code);
+      page = await cachedSearch(deps, args.year, code);
     } catch (err) {
       throw new UpstreamError(`NTNU timetable request failed: ${(err as Error).message}`);
     }
