@@ -21,11 +21,12 @@ Eight tools, all read-only:
 
 ## Connecting
 
-Once deployed, paste the worker's MCP URL — for example
-`https://<your-worker>.workers.dev/mcp` — into Claude's or ChatGPT's custom
-connector settings. **This is a placeholder**: no worker has been deployed
-yet, so no real URL exists at this time. Deployment is pending (see
-[Deploy](#deploy) below).
+Paste the server's MCP URL into Claude's or ChatGPT's custom connector
+settings:
+
+```
+https://ntnu-mcp.martin-s-aspas.workers.dev/mcp
+```
 
 The server requires no authentication, since it only serves public,
 read-only NTNU course data.
