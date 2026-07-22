@@ -25,7 +25,7 @@ Paste the server's MCP URL into Claude's or ChatGPT's custom connector
 settings:
 
 ```
-https://ntnu-mcp.martin-s-aspas.workers.dev/mcp
+https://ntnu-mcp.martinsundal.no/mcp
 ```
 
 The server requires no authentication, since it only serves public,
@@ -70,6 +70,9 @@ tool functions directly against fetch fixtures captured verbatim from
 locally.
 
 ## Deploy
+
+Pushes to `main` deploy automatically (the repo is connected to Cloudflare
+Workers Builds). For a manual deploy from a checkout:
 
 ```sh
 npm run deploy   # wrangler deploy

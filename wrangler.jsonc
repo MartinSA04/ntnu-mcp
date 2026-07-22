@@ -4,6 +4,10 @@
   "main": "src/server.ts",
   "compatibility_date": "2026-07-01",
   "compatibility_flags": ["nodejs_compat"],
+  // Public hostname (also reachable at ntnu-mcp.martin-s-aspas.workers.dev).
+  // Declared here rather than only in the dashboard so deploys are
+  // reproducible; requires the martinsundal.no zone on this account.
+  "routes": [{ "pattern": "ntnu-mcp.martinsundal.no", "custom_domain": true }],
   // The installed `agents` SDK (0.2.35) statically pulls in a dynamic
   // `import("ai")` from an unrelated AI-SDK-chat-client code path inside
   // `agents/mcp` (see shims/ai-stub.ts for the full story). `ai` is not a
