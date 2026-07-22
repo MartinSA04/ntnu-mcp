@@ -1,0 +1,46 @@
+{
+ "courses": [
+  {
+   "courseCode": "TFE4130",
+   "courseName": "Bølgeforplantning",
+   "courseUrl": "https://www.ntnu.no/studier/emner/TFE4130/2026",
+   "courseVersion": "1",
+   "exam": [
+    {
+     "date": "2026-12-18",
+     "continuation": false,
+     "season": "AUTUMN",
+     "submissionDate": null,
+     "withdrawalDate": null
+    }
+   ],
+   "hasMultimedia": false,
+   "examOnly": false,
+   "location": "Trondheim"
+  },
+  {
+   "courseCode": "TIØ4535",
+   "courseName": "NTNUs entreprenørskole, fordypningsemne",
+   "courseUrl": "https://www.ntnu.no/studier/emner/TIØ4535/2026",
+   "courseVersion": "1",
+   "exam": [],
+   "hasMultimedia": false,
+   "examOnly": false,
+   "location": "Trondheim"
+  },
+  {
+   "courseCode": "TDT4100",
+   "courseName": "Objektorientert programmering",
+   "courseUrl": "https://www.ntnu.no/studier/emner/TDT4100/2026",
+   "courseVersion": "1",
+   "exam": [],
+   "hasMultimedia": false,
+   "examOnly": false,
+   "location": "Trondheim"
+  }
+ ],
+ "hasMoreResults": true,
+ "numFound": 4767,
+ "pageNr": 1,
+ "pageSize": 500
+}

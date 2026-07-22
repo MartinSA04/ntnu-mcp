@@ -1,0 +1,97 @@
+{
+ "schedules": [
+  {
+   "acronym": "DISAM-P",
+   "activityCode": "194_TDT4100_1_VÅR_2026_1_2",
+   "artermin": "2026_VÅR",
+   "courseCode": "TDT4100",
+   "courseName": {
+    "nameNob": "Objektorientert programmering",
+    "nameNno": "Objektorientert programmering",
+    "nameEng": "Object-Oriented Programming"
+   },
+   "name": "Dialog- og samarbeidsbasert undervisning",
+   "termnr": 1,
+   "title": "Lab BDIGSEC",
+   "tpId": "194-TDT4100-1-1-2_2026_VÅR_TDT4100",
+   "disiplin": [],
+   "from": 1768202100000,
+   "staff": [],
+   "rooms": [
+    {
+     "id": "194_360_A2-127",
+     "building": "Realfagbygget",
+     "room": "R52",
+     "url": "http://use.mazemap.com/?v=1&campuses=ntnu&sharepoitype=identifier&sharepoi=360-A2-127"
+    }
+   ],
+   "status": "active",
+   "studyProgramKeys": [],
+   "summary": "Labøving",
+   "to": 1768215600000,
+   "week": 3
+  },
+  {
+   "acronym": "DISAM-P",
+   "activityCode": "194_TDT4100_1_VÅR_2026_1_2",
+   "artermin": "2026_VÅR",
+   "courseCode": "TDT4100",
+   "courseName": {
+    "nameNob": "Objektorientert programmering",
+    "nameNno": "Objektorientert programmering",
+    "nameEng": "Object-Oriented Programming"
+   },
+   "name": "Dialog- og samarbeidsbasert undervisning",
+   "termnr": 1,
+   "title": "Lab BDIGSEC",
+   "tpId": "194-TDT4100-1-1-2_2026_VÅR_TDT4100",
+   "disiplin": [],
+   "from": 1767597300000,
+   "staff": [],
+   "rooms": [
+    {
+     "id": "194_360_A2-127",
+     "building": "Realfagbygget",
+     "room": "R52",
+     "url": "http://use.mazemap.com/?v=1&campuses=ntnu&sharepoitype=identifier&sharepoi=360-A2-127"
+    }
+   ],
+   "status": "active",
+   "studyProgramKeys": [],
+   "summary": "Labøving",
+   "to": 1767610800000,
+   "week": 2
+  },
+  {
+   "acronym": "DISAM-P",
+   "activityCode": "194_TDT4100_1_VÅR_2026_1_2",
+   "artermin": "2026_VÅR",
+   "courseCode": "TDT4100",
+   "courseName": {
+    "nameNob": "Objektorientert programmering",
+    "nameNno": "Objektorientert programmering",
+    "nameEng": "Object-Oriented Programming"
+   },
+   "name": "Dialog- og samarbeidsbasert undervisning",
+   "termnr": 1,
+   "title": "Lab BDIGSEC",
+   "tpId": "194-TDT4100-1-1-2_2026_VÅR_TDT4100",
+   "disiplin": [],
+   "from": 1769411700000,
+   "staff": [],
+   "rooms": [
+    {
+     "id": "194_360_A2-127",
+     "building": "Realfagbygget",
+     "room": "R52",
+     "url": "http://use.mazemap.com/?v=1&campuses=ntnu&sharepoitype=identifier&sharepoi=360-A2-127"
+    }
+   ],
+   "status": "active",
+   "studyProgramKeys": [],
+   "summary": "Labøving",
+   "to": 1769425200000,
+   "week": 5
+  }
+ ]
+}

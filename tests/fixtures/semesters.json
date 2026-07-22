@@ -1,0 +1,390 @@
+[
+ {
+  "id": "26h",
+  "name": "2026 Høst",
+  "fase": "final",
+  "fromdate": "2026-07-27",
+  "todate": "2027-01-11",
+  "booking": true,
+  "standard": true,
+  "not_ready": false,
+  "fswrite": true,
+  "pubextime": false,
+  "pubexdate": false,
+  "pubexroom": false,
+  "name_en": "2026 Autumn",
+  "name_nn": "2026 Haust",
+  "send_mq": false,
+  "listen_mq": false,
+  "publish_timetable": true,
+  "booking_student": true,
+  "season": "AUTUMN",
+  "year": 2026,
+  "teaching_weeks": [
+   "34",
+   "35",
+   "36",
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "42",
+   "43",
+   "44",
+   "45",
+   "46",
+   "47"
+  ],
+  "exam_lastdate": "2027-02-01",
+  "exam_finaldate": "2027-02-28",
+  "publish_for_staff": true,
+  "random_int": 412716,
+  "use_random_int": false,
+  "not_ready_text": {
+   "nb": "",
+   "no": "",
+   "nn": "",
+   "en": ""
+  },
+  "weeks": [
+   {
+    "year": 2026,
+    "week": 31
+   },
+   {
+    "year": 2026,
+    "week": 32
+   },
+   {
+    "year": 2026,
+    "week": 33
+   },
+   {
+    "year": 2026,
+    "week": 34
+   },
+   {
+    "year": 2026,
+    "week": 35
+   },
+   {
+    "year": 2026,
+    "week": 36
+   },
+   {
+    "year": 2026,
+    "week": 37
+   },
+   {
+    "year": 2026,
+    "week": 38
+   },
+   {
+    "year": 2026,
+    "week": 39
+   },
+   {
+    "year": 2026,
+    "week": 40
+   },
+   {
+    "year": 2026,
+    "week": 41
+   },
+   {
+    "year": 2026,
+    "week": 42
+   },
+   {
+    "year": 2026,
+    "week": 43
+   },
+   {
+    "year": 2026,
+    "week": 44
+   },
+   {
+    "year": 2026,
+    "week": 45
+   },
+   {
+    "year": 2026,
+    "week": 46
+   },
+   {
+    "year": 2026,
+    "week": 47
+   },
+   {
+    "year": 2026,
+    "week": 48
+   },
+   {
+    "year": 2026,
+    "week": 49
+   },
+   {
+    "year": 2026,
+    "week": 50
+   },
+   {
+    "year": 2026,
+    "week": 51
+   },
+   {
+    "year": 2026,
+    "week": 52
+   },
+   {
+    "year": 2026,
+    "week": 53
+   },
+   {
+    "year": 2027,
+    "week": 1
+   },
+   {
+    "year": 2027,
+    "week": 2
+   }
+  ]
+ },
+ {
+  "id": "28h",
+  "name": "2028 Høst",
+  "fase": "initial",
+  "fromdate": "2028-07-31",
+  "todate": "2028-12-31",
+  "booking": false,
+  "standard": null,
+  "not_ready": true,
+  "fswrite": false,
+  "pubextime": false,
+  "pubexdate": false,
+  "pubexroom": false,
+  "name_en": "2028 Autumn",
+  "name_nn": "2028 Haust",
+  "send_mq": false,
+  "listen_mq": false,
+  "publish_timetable": null,
+  "booking_student": false,
+  "season": "AUTUMN",
+  "year": 2028,
+  "teaching_weeks": null,
+  "exam_lastdate": "2029-02-01",
+  "exam_finaldate": "2029-02-28",
+  "publish_for_staff": true,
+  "random_int": 272059,
+  "use_random_int": false,
+  "not_ready_text": {
+   "no": "<p>Time- og eksamensplanen er under arbeid</p>",
+   "nn": "",
+   "en": "",
+   "nb": "<p>Time- og eksamensplanen er under arbeid</p>"
+  },
+  "weeks": [
+   {
+    "year": 2028,
+    "week": 31
+   },
+   {
+    "year": 2028,
+    "week": 32
+   },
+   {
+    "year": 2028,
+    "week": 33
+   },
+   {
+    "year": 2028,
+    "week": 34
+   },
+   {
+    "year": 2028,
+    "week": 35
+   },
+   {
+    "year": 2028,
+    "week": 36
+   },
+   {
+    "year": 2028,
+    "week": 37
+   },
+   {
+    "year": 2028,
+    "week": 38
+   },
+   {
+    "year": 2028,
+    "week": 39
+   },
+   {
+    "year": 2028,
+    "week": 40
+   },
+   {
+    "year": 2028,
+    "week": 41
+   },
+   {
+    "year": 2028,
+    "week": 42
+   },
+   {
+    "year": 2028,
+    "week": 43
+   },
+   {
+    "year": 2028,
+    "week": 44
+   },
+   {
+    "year": 2028,
+    "week": 45
+   },
+   {
+    "year": 2028,
+    "week": 46
+   },
+   {
+    "year": 2028,
+    "week": 47
+   },
+   {
+    "year": 2028,
+    "week": 48
+   },
+   {
+    "year": 2028,
+    "week": 49
+   },
+   {
+    "year": 2028,
+    "week": 50
+   },
+   {
+    "year": 2028,
+    "week": 51
+   },
+   {
+    "year": 2028,
+    "week": 52
+   }
+  ]
+ },
+ {
+  "id": "28s",
+  "name": "2028 Sommer",
+  "fase": "initial",
+  "fromdate": "2028-06-05",
+  "todate": "2028-08-27",
+  "booking": false,
+  "standard": false,
+  "not_ready": true,
+  "fswrite": false,
+  "pubextime": false,
+  "pubexdate": false,
+  "pubexroom": false,
+  "name_en": "2028 Summer",
+  "name_nn": "2028 Sommar",
+  "send_mq": false,
+  "listen_mq": false,
+  "publish_timetable": false,
+  "booking_student": false,
+  "season": "SUMMER",
+  "year": 2028,
+  "teaching_weeks": [
+   "24",
+   "25",
+   "26",
+   "27",
+   "28",
+   "29",
+   "30",
+   "31",
+   "32"
+  ],
+  "exam_lastdate": "2028-09-01",
+  "exam_finaldate": "2027-09-01",
+  "publish_for_staff": true,
+  "random_int": 735166,
+  "use_random_int": false,
+  "not_ready_text": {
+   "no": "<p>Time- og eksamensplanen er under arbeid</p>",
+   "nn": "",
+   "en": "",
+   "nb": "<p>Time- og eksamensplanen er under arbeid</p>"
+  },
+  "weeks": [
+   {
+    "year": 2028,
+    "week": 23
+   },
+   {
+    "year": 2028,
+    "week": 24
+   },
+   {
+    "year": 2028,
+    "week": 25
+   },
+   {
+    "year": 2028,
+    "week": 26
+   },
+   {
+    "year": 2028,
+    "week": 27
+   },
+   {
+    "year": 2028,
+    "week": 28
+   },
+   {
+    "year": 2028,
+    "week": 29
+   },
+   {
+    "year": 2028,
+    "week": 30
+   },
+   {
+    "year": 2028,
+    "week": 31
+   },
+   {
+    "year": 2028,
+    "week": 32
+   },
+   {
+    "year": 2028,
+    "week": 33
+   },
+   {
+    "year": 2028,
+    "week": 34
+   }
+  ]
+ },
+ {
+  "id": "22h",
+  "name": "2022 Høst",
+  "name_en": "2022 Autumn",
+  "name_nn": "2022 Haust",
+  "fase": "closed",
+  "fromdate": "2022-08-08",
+  "todate": "2023-01-01",
+  "standard": true,
+  "publish_timetable": true,
+  "season": "AUTUMN",
+  "year": 2022,
+  "teaching_weeks": [
+   "33",
+   "34"
+  ],
+  "exam_lastdate": "2023-03-20",
+  "exam_finaldate": "2023-03-31"
+ }
+]

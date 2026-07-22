@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ntnu-mcp",
+  "main": "src/server.ts",
+  "compatibility_date": "2026-07-01",
+  "compatibility_flags": ["nodejs_compat"],
+  // The installed `agents` SDK (0.2.35) statically pulls in a dynamic
+  // `import("ai")` from an unrelated AI-SDK-chat-client code path inside
+  // `agents/mcp` (see shims/ai-stub.ts for the full story). `ai` is not a
+  // real dependency of this Worker — NtnuMcp never reaches that code path —
+  // so esbuild is pointed at a stub that only needs to exist, not to work.
+  "alias": {
+    "ai": "./shims/ai-stub.ts"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "MCP_OBJECT",
+        "class_name": "NtnuMcp"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["NtnuMcp"]
+    }
+  ]
+}

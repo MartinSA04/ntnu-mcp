@@ -1,0 +1,29 @@
+{
+  "name": "ntnu-mcp",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Cloudflare Workers MCP server exposing NTNU course data",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.test.json",
+    "lint": "biome check .",
+    "fmt": "biome check --write ."
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "agents": "^0.2.0",
+    "ntnu-api": "file:../ntnu-api",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.5",
+    "@cloudflare/workers-types": "^5.20260721.1",
+    "@types/node": "^22.20.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10",
+    "wrangler": "^4.0.0"
+  }
+}

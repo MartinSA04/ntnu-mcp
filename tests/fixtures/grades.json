@@ -1,0 +1,74 @@
+[
+ {
+  "Institusjonskode": "1150",
+  "Institusjonsnavn": "Norges teknisk-naturvitenskapelige universitet",
+  "Emnekode": "TDT4100-1",
+  "Årstall": "2023",
+  "Semester": "1",
+  "Semesternavn": "Vår",
+  "Karakter": "A",
+  "Antall kandidater totalt": "112",
+  "Antall kandidater kvinner": "20",
+  "Antall kandidater menn": "92"
+ },
+ {
+  "Institusjonskode": "1150",
+  "Institusjonsnavn": "Norges teknisk-naturvitenskapelige universitet",
+  "Emnekode": "TDT4100-1",
+  "Årstall": "2023",
+  "Semester": "1",
+  "Semesternavn": "Vår",
+  "Karakter": "B",
+  "Antall kandidater totalt": "122",
+  "Antall kandidater kvinner": "31",
+  "Antall kandidater menn": "91"
+ },
+ {
+  "Institusjonskode": "1150",
+  "Institusjonsnavn": "Norges teknisk-naturvitenskapelige universitet",
+  "Emnekode": "TDT4100-1",
+  "Årstall": "2023",
+  "Semester": "1",
+  "Semesternavn": "Vår",
+  "Karakter": "C",
+  "Antall kandidater totalt": "102",
+  "Antall kandidater kvinner": "40",
+  "Antall kandidater menn": "62"
+ },
+ {
+  "Institusjonskode": "1150",
+  "Institusjonsnavn": "Norges teknisk-naturvitenskapelige universitet",
+  "Emnekode": "TDT4100-1",
+  "Årstall": "2023",
+  "Semester": "1",
+  "Semesternavn": "Vår",
+  "Karakter": "D",
+  "Antall kandidater totalt": "81",
+  "Antall kandidater kvinner": "31",
+  "Antall kandidater menn": "50"
+ },
+ {
+  "Institusjonskode": "1150",
+  "Institusjonsnavn": "Norges teknisk-naturvitenskapelige universitet",
+  "Emnekode": "TDT4100-1",
+  "Årstall": "2023",
+  "Semester": "1",
+  "Semesternavn": "Vår",
+  "Karakter": "E",
+  "Antall kandidater totalt": "47",
+  "Antall kandidater kvinner": "21",
+  "Antall kandidater menn": "26"
+ },
+ {
+  "Institusjonskode": "1150",
+  "Institusjonsnavn": "Norges teknisk-naturvitenskapelige universitet",
+  "Emnekode": "TDT4100-1",
+  "Årstall": "2023",
+  "Semester": "1",
+  "Semesternavn": "Vår",
+  "Karakter": "F",
+  "Antall kandidater totalt": "108",
+  "Antall kandidater kvinner": "52",
+  "Antall kandidater menn": "56"
+ }
+]

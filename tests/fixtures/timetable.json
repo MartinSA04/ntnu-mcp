@@ -1,0 +1,103 @@
+{
+ "summarized": [
+  {
+   "acronym": "DISAM-P",
+   "artermin": "2026_VÅR",
+   "courseCode": "TDT4100",
+   "courseName": {
+    "nameNob": "Objektorientert programmering",
+    "nameNno": "Objektorientert programmering",
+    "nameEng": "Object-Oriented Programming"
+   },
+   "name": "Dialog- og samarbeidsbasert undervisning",
+   "termnr": 1,
+   "title": "Lab BDIGSEC",
+   "weeks": [
+    "2-13",
+    "15-18"
+   ],
+   "rooms": [
+    {
+     "id": "194_360_A2-127",
+     "building": "Realfagbygget",
+     "room": "R52",
+     "url": "http://use.mazemap.com/?v=1&campuses=ntnu&sharepoitype=identifier&sharepoi=360-A2-127"
+    }
+   ],
+   "studyProgramKeys": [],
+   "dayNum": 1,
+   "from": "08:15",
+   "to": "12:00"
+  },
+  {
+   "acronym": "DISAM-P",
+   "artermin": "2026_VÅR",
+   "courseCode": "TDT4100",
+   "courseName": {
+    "nameNob": "Objektorientert programmering",
+    "nameNno": "Objektorientert programmering",
+    "nameEng": "Object-Oriented Programming"
+   },
+   "name": "Dialog- og samarbeidsbasert undervisning",
+   "termnr": 1,
+   "title": "Laboratorieøvelse",
+   "weeks": [
+    "2-13",
+    "15-18"
+   ],
+   "rooms": [
+    {
+     "id": "194_360_A4-156",
+     "building": "Realfagbygget",
+     "room": "A4-156",
+     "url": "http://use.mazemap.com/?v=1&campuses=ntnu&sharepoitype=identifier&sharepoi=360-A4-156"
+    }
+   ],
+   "studyProgramKeys": [],
+   "dayNum": 1,
+   "from": "08:15",
+   "to": "18:00"
+  },
+  {
+   "acronym": "FORM",
+   "artermin": "2026_VÅR",
+   "courseCode": "TDT4100",
+   "courseName": {
+    "nameNob": "Objektorientert programmering",
+    "nameNno": "Objektorientert programmering",
+    "nameEng": "Object-Oriented Programming"
+   },
+   "name": "Formidling",
+   "termnr": 1,
+   "title": "Forelesning 1",
+   "weeks": [
+    "2-13",
+    "15-18"
+   ],
+   "rooms": [
+    {
+     "id": "194_318_152",
+     "building": "IT-bygget, sydfløy",
+     "room": "F1",
+     "url": "http://use.mazemap.com/?v=1&campuses=ntnu&sharepoitype=identifier&sharepoi=318-152"
+    }
+   ],
+   "studyProgramKeys": [
+    "BKJ",
+    "MTDT",
+    "MBIOT5",
+    "MTKOM",
+    "MLREAL",
+    "MTIØT",
+    "BDIGSEC",
+    "BSØK",
+    "BIT",
+    "MSIVØK5",
+    "MTING"
+   ],
+   "dayNum": 1,
+   "from": "12:15",
+   "to": "14:00"
+  }
+ ]
+}

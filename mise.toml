@@ -1,0 +1,30 @@
+[tools]
+node = "22"
+
+[tasks.test]
+description = "Run the test suite"
+run = "npm test"
+
+[tasks.lint]
+description = "Lint and check formatting"
+run = "npm run lint"
+
+[tasks.fmt]
+description = "Auto-format and apply lint fixes"
+run = "npm run fmt"
+
+[tasks.typecheck]
+description = "Static type check"
+run = "npm run typecheck"
+
+[tasks.dev]
+description = "Run the worker locally"
+run = "npm run dev"
+
+[tasks.deploy]
+description = "Deploy the worker"
+run = "npm run deploy"
+
+[tasks.check]
+description = "Run lint, typecheck, and tests"
+depends = ["lint", "typecheck", "test"]
