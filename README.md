@@ -1,8 +1,7 @@
 # ntnu-mcp
 
 A remote [MCP](https://modelcontextprotocol.io) server that exposes NTNU
-(Norwegian University of Science and Technology) course data to LLM assistants
-— course catalog search, teaching schedules, weekly timetables, and grade
+(Norwegian University of Science and Technology) course data to LLM assistants; course catalog search, teaching schedules, weekly timetables, and grade
 statistics, plus two comparison tools for students choosing between courses.
 Runs as a Cloudflare Worker; no installation required on the client side.
 
