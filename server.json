@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.martinsa04/ntnu-mcp",
+  "name": "io.github.MartinSA04/ntnu-mcp",
   "title": "NTNU Courses (unofficial)",
   "description": "Unofficial NTNU course data: search, timetables, grades, course info, and exam logistics.",
   "version": "0.2.0",

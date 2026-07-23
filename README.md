@@ -35,7 +35,7 @@ read-only NTNU course data.
 
 The server is also listed in the
 [official MCP registry](https://registry.modelcontextprotocol.io) as
-`io.github.martinsa04/ntnu-mcp` (see [server.json](server.json)); clients
+`io.github.MartinSA04/ntnu-mcp` (see [server.json](server.json)); clients
 that browse the registry can discover it there. It is an unofficial
 community server, not affiliated with NTNU. Publishing a new registry
 version: bump `version` in both `package.json` and `server.json`, then
