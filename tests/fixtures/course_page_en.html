@@ -1,0 +1,4717 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="ltr" dir="ltr" lang="en-GB">
+	<head>
+		<title>Course - Object-Oriented Programming - TDT4100 - NTNU</title>
+		<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="NTNU">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="NTNU">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+		<link rel="apple-touch-icon" href="https://www.ntnu.edu/o/ntnu-theme/images/ntnu-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="https://www.ntnu.edu/o/ntnu-theme/images/ntnu-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="https://www.ntnu.edu/o/ntnu-theme/images/ntnu-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="https://www.ntnu.edu/o/ntnu-theme/images/ntnu-icon-152x152.png">
+
+		<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700" rel="stylesheet" type="text/css">
+		<meta name="google-site-verification" content="MvmsXC06IWyb82SIuHjRFnJodYChvM7Vot7rt_2EcGk">
+		<script defer src="https://umami.it.ntnu.no/script.js" data-website-id="c2d02892-c0b8-4056-8265-05f9e45f2f9a" data-exclude-hash="false" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+
+
+
+
+
+
+
+
+
+
+
+<script data-senna-track="permanent" src="/o/frontend-js-lodash-web/lodash/lodash.js" type="text/javascript"></script>
+<script data-senna-track="permanent" src="/o/frontend-js-lodash-web/lodash/util.js" type="text/javascript"></script>
+
+
+<link href="https://www.ntnu.edu/o/ntnu-theme/images/logoicon.ico" rel="icon" />
+
+
+
+
+	
+	
+
+			
+
+			<link data-senna-track="temporary" href="https://www.ntnu.edu/nb/web/studies/courses/-/course_details/TDT4100/2025" hreflang="nb-NO" rel="alternate" />
+
+	
+
+			
+				<link data-senna-track="temporary" href="https://www.ntnu.edu/web/studies/courses/-/course_details/TDT4100/2025" hreflang="x-default" rel="alternate" />
+			
+
+			<link data-senna-track="temporary" href="https://www.ntnu.edu/web/studies/courses/-/course_details/TDT4100/2025" hreflang="en-GB" rel="alternate" />
+
+	
+
+
+
+
+
+<link class="lfr-css-file" data-senna-track="temporary" href="https://www.ntnu.edu/o/ntnu-theme/css/clay.css?browserId=other&amp;themeId=ntnutheme_WAR_ntnutheme&amp;minifierType=css&amp;languageId=en_GB&amp;b=7110&amp;t=1782308786000" id="liferayAUICSS" rel="stylesheet" type="text/css" />
+
+
+
+<link data-senna-track="temporary" href="/o/frontend-css-web/main.css?browserId=other&amp;themeId=ntnutheme_WAR_ntnutheme&amp;minifierType=css&amp;languageId=en_GB&amp;b=7110&amp;t=1782315918235" id="liferayPortalCSS" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+	
+
+
+
+	
+
+		<link data-senna-track="temporary" href="/combo?browserId=other&amp;minifierType=&amp;themeId=ntnutheme_WAR_ntnutheme&amp;languageId=en_GB&amp;b=7110&amp;com_liferay_portal_search_web_search_bar_portlet_SearchBarPortlet_INSTANCE_templateSearch:%2Fsearch%2Fbar%2Fcss%2Fmain.css&amp;com_liferay_product_navigation_product_menu_web_portlet_ProductMenuPortlet:%2Fcss%2Fmain.css&amp;com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet:%2Fcss%2Fmain.css&amp;t=1782308786000" id="7f808a19" rel="stylesheet" type="text/css" />
+
+	
+
+
+
+
+
+
+
+<script data-senna-track="temporary" type="text/javascript">
+	// <![CDATA[
+		var Liferay = Liferay || {};
+
+		Liferay.Browser = {
+			acceptsGzip: function() {
+				return false;
+			},
+
+			
+
+			getMajorVersion: function() {
+				return 0;
+			},
+
+			getRevision: function() {
+				return '';
+			},
+			getVersion: function() {
+				return '';
+			},
+
+			
+
+			isAir: function() {
+				return false;
+			},
+			isChrome: function() {
+				return false;
+			},
+			isEdge: function() {
+				return false;
+			},
+			isFirefox: function() {
+				return false;
+			},
+			isGecko: function() {
+				return false;
+			},
+			isIe: function() {
+				return false;
+			},
+			isIphone: function() {
+				return false;
+			},
+			isLinux: function() {
+				return false;
+			},
+			isMac: function() {
+				return false;
+			},
+			isMobile: function() {
+				return false;
+			},
+			isMozilla: function() {
+				return false;
+			},
+			isOpera: function() {
+				return false;
+			},
+			isRtf: function() {
+				return false;
+			},
+			isSafari: function() {
+				return false;
+			},
+			isSun: function() {
+				return false;
+			},
+			isWebKit: function() {
+				return false;
+			},
+			isWindows: function() {
+				return false;
+			}
+		};
+
+		Liferay.Data = Liferay.Data || {};
+
+		Liferay.Data.ICONS_INLINE_SVG = true;
+
+		Liferay.Data.NAV_SELECTOR = '#navigation';
+
+		Liferay.Data.NAV_SELECTOR_MOBILE = '#navigationCollapse';
+
+		Liferay.Data.isCustomizationView = function() {
+			return false;
+		};
+
+		Liferay.Data.notices = [
+			null
+
+			
+
+			
+		];
+
+		Liferay.PortletKeys = {
+			DOCUMENT_LIBRARY: 'com_liferay_document_library_web_portlet_DLPortlet',
+			DYNAMIC_DATA_MAPPING: 'com_liferay_dynamic_data_mapping_web_portlet_DDMPortlet',
+			ITEM_SELECTOR: 'com_liferay_item_selector_web_portlet_ItemSelectorPortlet'
+		};
+
+		Liferay.PropsValues = {
+			JAVASCRIPT_SINGLE_PAGE_APPLICATION_TIMEOUT: 0,
+			NTLM_AUTH_ENABLED: false,
+			UPLOAD_SERVLET_REQUEST_IMPL_MAX_SIZE: 90085760000
+		};
+
+		Liferay.ThemeDisplay = {
+
+			
+
+			
+				getLayoutId: function() {
+					return '205';
+				},
+
+				
+
+				getLayoutRelativeControlPanelURL: function() {
+					return '/group/studies/~/control_panel/manage?p_p_id=coursedetailsportlet_WAR_courselistportlet';
+				},
+
+				getLayoutRelativeURL: function() {
+					return '/web/studies/courses';
+				},
+				getLayoutURL: function() {
+					return 'https://www.ntnu.edu/web/studies/courses';
+				},
+				getParentLayoutId: function() {
+					return '1';
+				},
+				isControlPanel: function() {
+					return false;
+				},
+				isPrivateLayout: function() {
+					return 'false';
+				},
+				isVirtualLayout: function() {
+					return false;
+				},
+			
+
+			getBCP47LanguageId: function() {
+				return 'en-GB';
+			},
+			getCanonicalURL: function() {
+
+				
+
+				return 'https\x3a\x2f\x2fwww\x2entnu\x2eedu\x2fweb\x2fstudies\x2fcourses\x2f-\x2fcourse_details\x2fTDT4100\x2f2025';
+			},
+			getCDNBaseURL: function() {
+				return 'https://www.ntnu.edu';
+			},
+			getCDNDynamicResourcesHost: function() {
+				return '';
+			},
+			getCDNHost: function() {
+				return '';
+			},
+			getCompanyGroupId: function() {
+				return '4941134';
+			},
+			getCompanyId: function() {
+				return '139202';
+			},
+			getDefaultLanguageId: function() {
+				return 'en_GB';
+			},
+			getDoAsUserIdEncoded: function() {
+				return '';
+			},
+			getLanguageId: function() {
+				return 'en_GB';
+			},
+			getParentGroupId: function() {
+				return '593504';
+			},
+			getPathContext: function() {
+				return '';
+			},
+			getPathImage: function() {
+				return '/image';
+			},
+			getPathJavaScript: function() {
+				return '/o/frontend-js-web';
+			},
+			getPathMain: function() {
+				return '/c';
+			},
+			getPathThemeImages: function() {
+				return 'https://www.ntnu.edu/o/ntnu-theme/images';
+			},
+			getPathThemeRoot: function() {
+				return '/o/ntnu-theme';
+			},
+			getPlid: function() {
+				return '18084567';
+			},
+			getPortalURL: function() {
+				return 'https://www.ntnu.edu';
+			},
+			getScopeGroupId: function() {
+				return '593504';
+			},
+			getScopeGroupIdOrLiveGroupId: function() {
+				return '593504';
+			},
+			getSessionId: function() {
+				return '';
+			},
+			getSiteAdminURL: function() {
+				return 'https://www.ntnu.edu/group/studies/~/control_panel/manage?p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view';
+			},
+			getSiteGroupId: function() {
+				return '593504';
+			},
+			getURLControlPanel: function() {
+				return '/group/control_panel?refererPlid=18084567';
+			},
+			getURLHome: function() {
+				return 'https\x3a\x2f\x2fwww\x2entnu\x2eedu\x2fweb\x2fguest';
+			},
+			getUserEmailAddress: function() {
+				return '';
+			},
+			getUserId: function() {
+				return '139205';
+			},
+			getUserName: function() {
+				return '';
+			},
+			isAddSessionIdToURL: function() {
+				return false;
+			},
+			isFreeformLayout: function() {
+				return false;
+			},
+			isImpersonated: function() {
+				return false;
+			},
+			isSignedIn: function() {
+				return false;
+			},
+			isStateExclusive: function() {
+				return false;
+			},
+			isStateMaximized: function() {
+				return false;
+			},
+			isStatePopUp: function() {
+				return false;
+			}
+		};
+
+		var themeDisplay = Liferay.ThemeDisplay;
+
+		Liferay.AUI = {
+
+			
+
+			getAvailableLangPath: function() {
+				return 'available_languages.jsp?browserId=other&themeId=ntnutheme_WAR_ntnutheme&colorSchemeId=01&minifierType=js&languageId=en_GB&b=7110&t=1782315916739';
+			},
+			getCombine: function() {
+				return true;
+			},
+			getComboPath: function() {
+				return '/combo/?browserId=other&minifierType=&languageId=en_GB&b=7110&t=1782315921806&';
+			},
+			getDateFormat: function() {
+				return '%d/%m/%Y';
+			},
+			getEditorCKEditorPath: function() {
+				return '/o/frontend-editor-ckeditor-web';
+			},
+			getFilter: function() {
+				var filter = 'raw';
+
+				
+					
+						filter = 'min';
+					
+					
+
+				return filter;
+			},
+			getFilterConfig: function() {
+				var instance = this;
+
+				var filterConfig = null;
+
+				if (!instance.getCombine()) {
+					filterConfig = {
+						replaceStr: '.js' + instance.getStaticResourceURLParams(),
+						searchExp: '\\.js$'
+					};
+				}
+
+				return filterConfig;
+			},
+			getJavaScriptRootPath: function() {
+				return '/o/frontend-js-web';
+			},
+			getLangPath: function() {
+				return 'aui_lang.jsp?browserId=other&themeId=ntnutheme_WAR_ntnutheme&colorSchemeId=01&minifierType=js&languageId=en_GB&b=7110&t=1782315921806';
+			},
+			getPortletRootPath: function() {
+				return '/html/portlet';
+			},
+			getStaticResourceURLParams: function() {
+				return '?browserId=other&minifierType=&languageId=en_GB&b=7110&t=1782315921806';
+			}
+		};
+
+		Liferay.authToken = 'xX9J0rMr';
+
+		
+
+		Liferay.currentURL = '\x2fweb\x2fstudies\x2fcourses\x2f-\x2fcourse_details\x2fTDT4100\x2f2025';
+		Liferay.currentURLEncoded = '\x252Fweb\x252Fstudies\x252Fcourses\x252F-\x252Fcourse_details\x252FTDT4100\x252F2025';
+	// ]]>
+</script>
+
+
+
+	
+
+	<script src="/o/js_loader_modules?t=1782383598016" type="text/javascript"></script>
+
+
+<script src="/o/js_loader_config?t=1782315932326" type="text/javascript"></script>
+<script data-senna-track="permanent" src="/combo?browserId=other&minifierType=js&languageId=en_GB&b=7110&t=1782315921806&/o/frontend-js-web/jquery/jquery.js&/o/frontend-js-web/clay/popper.js&/o/frontend-js-web/clay/bootstrap.js&/o/frontend-js-web/aui/aui/aui.js&/o/frontend-js-web/aui/aui-base-html5-shiv/aui-base-html5-shiv.js&/o/frontend-js-web/liferay/browser_selectors.js&/o/frontend-js-web/liferay/modules.js&/o/frontend-js-web/liferay/aui_sandbox.js&/o/frontend-js-web/clay/collapsible-search.js&/o/frontend-js-web/clay/side-navigation.js&/o/frontend-js-web/jquery/fm.js&/o/frontend-js-web/jquery/form.js&/o/frontend-js-web/misc/svg4everybody.js&/o/frontend-js-web/aui/arraylist-add/arraylist-add.js&/o/frontend-js-web/aui/arraylist-filter/arraylist-filter.js&/o/frontend-js-web/aui/arraylist/arraylist.js&/o/frontend-js-web/aui/array-extras/array-extras.js&/o/frontend-js-web/aui/array-invoke/array-invoke.js&/o/frontend-js-web/aui/attribute-base/attribute-base.js&/o/frontend-js-web/aui/attribute-complex/attribute-complex.js&/o/frontend-js-web/aui/attribute-core/attribute-core.js&/o/frontend-js-web/aui/attribute-observable/attribute-observable.js&/o/frontend-js-web/aui/attribute-extras/attribute-extras.js&/o/frontend-js-web/aui/base-base/base-base.js&/o/frontend-js-web/aui/base-pluginhost/base-pluginhost.js&/o/frontend-js-web/aui/classnamemanager/classnamemanager.js&/o/frontend-js-web/aui/datatype-xml-format/datatype-xml-format.js&/o/frontend-js-web/aui/datatype-xml-parse/datatype-xml-parse.js&/o/frontend-js-web/aui/dom-base/dom-base.js&/o/frontend-js-web/aui/dom-core/dom-core.js&/o/frontend-js-web/aui/dom-screen/dom-screen.js&/o/frontend-js-web/aui/dom-style/dom-style.js&/o/frontend-js-web/aui/event-base/event-base.js&/o/frontend-js-web/aui/event-custom-base/event-custom-base.js&/o/frontend-js-web/aui/event-custom-complex/event-custom-complex.js&/o/frontend-js-web/aui/event-delegate/event-delegate.js&/o/frontend-js-web/aui/event-focus/event-focus.js&/o/frontend-js-web/aui/event-hover/event-hover.js" type="text/javascript"></script>
+<script data-senna-track="permanent" src="/combo?browserId=other&minifierType=js&languageId=en_GB&b=7110&t=1782315921806&/o/frontend-js-web/aui/event-key/event-key.js&/o/frontend-js-web/aui/event-mouseenter/event-mouseenter.js&/o/frontend-js-web/aui/event-mousewheel/event-mousewheel.js&/o/frontend-js-web/aui/event-outside/event-outside.js&/o/frontend-js-web/aui/event-resize/event-resize.js&/o/frontend-js-web/aui/event-simulate/event-simulate.js&/o/frontend-js-web/aui/event-synthetic/event-synthetic.js&/o/frontend-js-web/aui/intl/intl.js&/o/frontend-js-web/aui/io-base/io-base.js&/o/frontend-js-web/aui/io-form/io-form.js&/o/frontend-js-web/aui/io-queue/io-queue.js&/o/frontend-js-web/aui/io-upload-iframe/io-upload-iframe.js&/o/frontend-js-web/aui/io-xdr/io-xdr.js&/o/frontend-js-web/aui/json-parse/json-parse.js&/o/frontend-js-web/aui/json-stringify/json-stringify.js&/o/frontend-js-web/aui/node-base/node-base.js&/o/frontend-js-web/aui/node-core/node-core.js&/o/frontend-js-web/aui/node-event-delegate/node-event-delegate.js&/o/frontend-js-web/aui/node-event-simulate/node-event-simulate.js&/o/frontend-js-web/aui/node-focusmanager/node-focusmanager.js&/o/frontend-js-web/aui/node-pluginhost/node-pluginhost.js&/o/frontend-js-web/aui/node-screen/node-screen.js&/o/frontend-js-web/aui/node-style/node-style.js&/o/frontend-js-web/aui/oop/oop.js&/o/frontend-js-web/aui/plugin/plugin.js&/o/frontend-js-web/aui/pluginhost-base/pluginhost-base.js&/o/frontend-js-web/aui/pluginhost-config/pluginhost-config.js&/o/frontend-js-web/aui/querystring-stringify-simple/querystring-stringify-simple.js&/o/frontend-js-web/aui/queue-promote/queue-promote.js&/o/frontend-js-web/aui/selector-css2/selector-css2.js&/o/frontend-js-web/aui/selector-css3/selector-css3.js&/o/frontend-js-web/aui/selector-native/selector-native.js&/o/frontend-js-web/aui/selector/selector.js&/o/frontend-js-web/aui/widget-base/widget-base.js&/o/frontend-js-web/aui/widget-htmlparser/widget-htmlparser.js&/o/frontend-js-web/aui/widget-skin/widget-skin.js" type="text/javascript"></script>
+<script data-senna-track="permanent" src="/combo?browserId=other&minifierType=js&languageId=en_GB&b=7110&t=1782315921806&/o/frontend-js-web/aui/widget-uievents/widget-uievents.js&/o/frontend-js-web/aui/yui-throttle/yui-throttle.js&/o/frontend-js-web/aui/aui-base-core/aui-base-core.js&/o/frontend-js-web/aui/aui-base-lang/aui-base-lang.js&/o/frontend-js-web/aui/aui-classnamemanager/aui-classnamemanager.js&/o/frontend-js-web/aui/aui-component/aui-component.js&/o/frontend-js-web/aui/aui-debounce/aui-debounce.js&/o/frontend-js-web/aui/aui-delayed-task-deprecated/aui-delayed-task-deprecated.js&/o/frontend-js-web/aui/aui-event-base/aui-event-base.js&/o/frontend-js-web/aui/aui-event-input/aui-event-input.js&/o/frontend-js-web/aui/aui-form-validator/aui-form-validator.js&/o/frontend-js-web/aui/aui-node-base/aui-node-base.js&/o/frontend-js-web/aui/aui-node-html5/aui-node-html5.js&/o/frontend-js-web/aui/aui-selector/aui-selector.js&/o/frontend-js-web/aui/aui-timer/aui-timer.js&/o/frontend-js-web/liferay/dependency.js&/o/frontend-js-web/liferay/dom_task_runner.js&/o/frontend-js-web/liferay/events.js&/o/frontend-js-web/liferay/language.js&/o/frontend-js-web/liferay/lazy_load.js&/o/frontend-js-web/liferay/liferay.js&/o/frontend-js-web/liferay/util.js&/o/frontend-js-web/liferay/global.bundle.js&/o/frontend-js-web/liferay/portal.js&/o/frontend-js-web/liferay/portlet.js&/o/frontend-js-web/liferay/workflow.js&/o/frontend-js-web/liferay/address.js&/o/frontend-js-web/liferay/form.js&/o/frontend-js-web/liferay/form_placeholders.js&/o/frontend-js-web/liferay/icon.js&/o/frontend-js-web/liferay/menu.js&/o/frontend-js-web/liferay/notice.js&/o/frontend-js-web/liferay/poller.js" type="text/javascript"></script>
+<script src="/o/frontend-js-web/loader/config.js" type="text/javascript"></script>
+<script src="/o/frontend-js-web/loader/loader.3.js" type="text/javascript"></script>
+
+
+
+
+	
+
+	<script data-senna-track="temporary" src="/o/js_bundle_config?t=1782315961903" type="text/javascript"></script>
+
+
+<script data-senna-track="temporary" type="text/javascript">
+	// <![CDATA[
+		
+			
+				
+		
+
+		
+
+		
+	// ]]>
+</script>
+
+
+
+
+
+
+
+
+
+	
+		
+
+			
+
+			
+		
+		
+
+
+
+	
+		
+
+			
+
+			
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+	
+
+
+
+	
+
+		<script data-senna-track="temporary" src="/combo?browserId=other&amp;minifierType=&amp;themeId=ntnutheme_WAR_ntnutheme&amp;languageId=en_GB&amp;b=7110&amp;coursedetailsportlet_WAR_courselistportlet:%2Fjs%2Flib%2Fmoment.min.js&amp;t=1782308786000" type="text/javascript"></script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link class="lfr-css-file" data-senna-track="temporary" href="https://www.ntnu.edu/o/ntnu-theme/css/main.css?browserId=other&amp;themeId=ntnutheme_WAR_ntnutheme&amp;minifierType=css&amp;languageId=en_GB&amp;b=7110&amp;t=1782308786000" id="liferayThemeCSS" rel="stylesheet" type="text/css" />
+
+
+
+
+	<style data-senna-track="temporary" type="text/css">
+		/*visited menu links fix */
+.nav-menu.localPageMenu ul * a:visited {
+color: initial;}
+
+/*make the global studes tab blue */
+li#layout_504 > a:first-of-type {
+background-color: #00509e!important;
+color:#fff !important;
+}
+	</style>
+
+
+
+
+
+	<style data-senna-track="temporary" type="text/css">
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+	</style>
+
+
+<link data-senna-track="permanent" href="https://www.ntnu.edu/combo?browserId=other&minifierType=css&languageId=en_GB&b=7110&t=1782315916500&/o/product-navigation-simulation-theme-contributor/css/simulation_panel.css&/o/product-navigation-product-menu-theme-contributor/product_navigation_product_menu.css&/o/product-navigation-control-menu-theme-contributor/product_navigation_control_menu.css" rel="stylesheet" type = "text/css" />
+<script data-senna-track="permanent" src="https://www.ntnu.edu/combo?browserId=other&minifierType=js&languageId=en_GB&b=7110&t=1782315916500&/o/product-navigation-control-menu-theme-contributor/product_navigation_control_menu.js" type = "text/javascript"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+// <![CDATA[
+Liferay.on(
+	'ddmFieldBlur', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldBlurred',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					focusDuration: event.focusDuration,
+					formId: event.formId,
+					page: event.page - 1
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFieldFocus', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldFocused',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					formId: event.formId,
+					page: event.page - 1
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormPageShow', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'pageViewed',
+				'Form',
+				{
+					formId: event.formId,
+					page: event.page,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormSubmit', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formSubmitted',
+				'Form',
+				{
+					formId: event.formId
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormView', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formViewed',
+				'Form',
+				{
+					formId: event.formId,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+// ]]>
+</script>
+
+
+
+
+
+
+
+<script data-senna-track="temporary" type="text/javascript">
+	if (window.Analytics) {
+		window._com_liferay_document_library_analytics_isViewFileEntry = false;
+	}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</head>
+
+
+	<body class=" controls-visible  yui3-skin-sam signed-out public-page site">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<nav class="quick-access-nav" id="kovr_quickAccessNav">
+		<h1 class="hide-accessible">Navigation</h1>
+
+		<ul>
+			
+				<li><a href="#main-content">Skip to Content</a></li>
+			
+
+			
+		</ul>
+	</nav>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="mb-0 pt-0" id="wrapper">
+
+<header id="banner">
+	<div id="navigation" class="navbar navbar-classic navbar-expand-md navbar-light shadow-ntnu bgc-white light bgh-s">
+	    <div class="container">
+				<a href="/" id="home_href">
+					<div style="min-height: 44px; display: flex; align-items: center;">
+						<span class="sr-only">NTNU Home</span>
+						<img id="header_logo" alt="NTNU Home" width="120px" src="https://www.ntnu.edu/o/ntnu-theme/images/ntnu-logo-web-v1.svg" height="23px" />
+					</div>
+				</a>
+    		<h1 class="sr-only">Studies</h1>
+
+	<div class="navbar-buttons">
+		<button aria-controls="searchCollapse" aria-expanded="false" aria-label="Toggle search" class="navbar-toggler navbar-toggler-right header-toggle-btn" data-target="#searchCollapse" data-toggle="collapse" type="button" id="search-toggle-btn">
+			<span class="icn"><i class="fa fa-search"></i></span>
+			<span class="icn-label">Search</span>
+		</button>
+
+		<button aria-controls="navigationCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right header-toggle-btn" data-target="#navigationCollapse" data-toggle="collapse" type="button" id="nav-toggle-btn">
+			<span class="icn"><i class="fa fa-bars"></i></span>
+			<span class="icn-label">Menu</span>
+		</button>
+	</div>
+
+	<div aria-expanded="false" class="collapse navbar-collapse" id="navigationCollapse">
+<ul aria-label="Site Pages" class="navbar-blank navbar-nav navbar-site" role="menubar">
+
+
+
+
+
+
+          <li class="lfr-nav-item nav-item dropdown" id="gmenuitem_0_0" role="presentation">
+            <a aria-labelledby="gmenuitem_0_0" aria-haspopup='true' class="nav-link text-truncate dropdown-toggle" href='' role="menuitem" data-toggle="dropdown" data-target="#">
+              <span class="text-truncate">Studies             <span class="lfr-nav-child-toggle">
+<span  id="qfkd____"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down" focusable="false" ><use data-href="https://www.ntnu.edu/o/ntnu-theme/images/lexicon/icons.svg#angle-down"></use></svg></span>            </span>
+</span>
+            </a>
+              <ul aria-expanded="false" class="child-menu dropdown-menu" role="menu">
+                    <li id="gmenuitem_1_0_Master's_programmes_in_English" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_0_Master's_programmes_in_English" class="dropdown-item" href="/studies/international/master"  role="menuitem">Master's programmes in English</a>
+                    </li>
+                    <li id="gmenuitem_1_1_For_exchange_students" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_1_For_exchange_students" class="dropdown-item" href="/studies/exchange"  role="menuitem">For exchange students</a>
+                    </li>
+                    <li id="gmenuitem_1_2_PhD_opportunities" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_2_PhD_opportunities" class="dropdown-item" href="/phd"  role="menuitem">PhD opportunities</a>
+                    </li>
+                    <li id="gmenuitem_1_3_All_programmes_of_study" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_3_All_programmes_of_study" class="dropdown-item" href="/studies/allstudies"  role="menuitem">All programmes of study</a>
+                    </li>
+                    <li id="gmenuitem_1_4_Courses" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_4_Courses" class="dropdown-item" href="/studies/courses"  role="menuitem">Courses</a>
+                    </li>
+                    <li id="gmenuitem_1_5_Financing" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_5_Financing" class="dropdown-item" href="/studies/financing-and-scholarships"  role="menuitem">Financing</a>
+                    </li>
+                    <li id="gmenuitem_1_6_Language_requirements" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_6_Language_requirements" class="dropdown-item" href="/studies/langcourses"  role="menuitem">Language requirements</a>
+                    </li>
+                    <li id="gmenuitem_1_7_Application_process" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_7_Application_process" class="dropdown-item" href="/studies/application"  role="menuitem">Application process</a>
+                    </li>
+                    <li id="gmenuitem_1_8_Academic_calendar" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_8_Academic_calendar" class="dropdown-item" href="/studies/academiccalendar"  role="menuitem">Academic calendar</a>
+                    </li>
+                    <li id="gmenuitem_1_9_FAQ" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_9_FAQ" class="dropdown-item" href="/studies/faq"  role="menuitem">FAQ</a>
+                    </li>
+              </ul>
+          </li>
+
+
+
+
+
+          <li class="lfr-nav-item nav-item dropdown" id="gmenuitem_0_2" role="presentation">
+            <a aria-labelledby="gmenuitem_0_2" aria-haspopup='true' class="nav-link text-truncate dropdown-toggle" href='' role="menuitem" data-toggle="dropdown" data-target="#">
+              <span class="text-truncate">Research and innovation             <span class="lfr-nav-child-toggle">
+<span  id="jbfs____"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down" focusable="false" ><use data-href="https://www.ntnu.edu/o/ntnu-theme/images/lexicon/icons.svg#angle-down"></use></svg></span>            </span>
+</span>
+            </a>
+              <ul aria-expanded="false" class="child-menu dropdown-menu" role="menu">
+                    <li id="gmenuitem_1_0_NTNU_research" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_0_NTNU_research" class="dropdown-item" href="/research"  role="menuitem">NTNU research</a>
+                    </li>
+                    <li id="gmenuitem_1_1_Research_excellence" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_1_Research_excellence" class="dropdown-item" href="/research/research-excellence"  role="menuitem">Research excellence</a>
+                    </li>
+                    <li id="gmenuitem_1_2_Strategic_research_areas" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_2_Strategic_research_areas" class="dropdown-item" href="/research/strategicareas"  role="menuitem">Strategic research areas</a>
+                    </li>
+                    <li id="gmenuitem_1_3_Innovation_resources" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_3_Innovation_resources" class="dropdown-item" href="/innovation-resources"  role="menuitem">Innovation resources</a>
+                    </li>
+                    <li id="gmenuitem_1_5_PhD_opportunities" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_5_PhD_opportunities" class="dropdown-item" href="/phd"  role="menuitem">PhD opportunities</a>
+                    </li>
+              </ul>
+          </li>
+
+
+
+
+
+          <li class="lfr-nav-item nav-item dropdown" id="gmenuitem_0_3" role="presentation">
+            <a aria-labelledby="gmenuitem_0_3" aria-haspopup='true' class="nav-link text-truncate dropdown-toggle" href='' role="menuitem" data-toggle="dropdown" data-target="#">
+              <span class="text-truncate">Life and housing             <span class="lfr-nav-child-toggle">
+<span  id="uvlz____"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down" focusable="false" ><use data-href="https://www.ntnu.edu/o/ntnu-theme/images/lexicon/icons.svg#angle-down"></use></svg></span>            </span>
+</span>
+            </a>
+              <ul aria-expanded="false" class="child-menu dropdown-menu" role="menu">
+                    <li id="gmenuitem_1_0_Student_in_Trondheim" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_0_Student_in_Trondheim" class="dropdown-item" href="/lifeandhousing/trondheim"  role="menuitem">Student in Trondheim</a>
+                    </li>
+                    <li id="gmenuitem_1_1_Student_in_Gjøvik" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_1_Student_in_Gjøvik" class="dropdown-item" href="/lifeandhousing/gjovik"  role="menuitem">Student in Gjøvik</a>
+                    </li>
+                    <li id="gmenuitem_1_2_Student_in_Ålesund" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_2_Student_in_Ålesund" class="dropdown-item" href="/lifeandhousing/alesund"  role="menuitem">Student in Ålesund</a>
+                    </li>
+                    <li id="gmenuitem_1_3_For_researchers" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_3_For_researchers" class="dropdown-item" href="/nirs"  role="menuitem">For researchers</a>
+                    </li>
+                    <li id="gmenuitem_1_4_Life_and_housing" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_4_Life_and_housing" class="dropdown-item" href="/lifeandhousing"  role="menuitem">Life and housing</a>
+                    </li>
+              </ul>
+          </li>
+
+
+
+
+
+          <li class="lfr-nav-item nav-item dropdown" id="gmenuitem_0_4" role="presentation">
+            <a aria-labelledby="gmenuitem_0_4" aria-haspopup='true' class="nav-link text-truncate dropdown-toggle" href='/about' role="menuitem" data-toggle="dropdown" data-target="#">
+              <span class="text-truncate">About NTNU             <span class="lfr-nav-child-toggle">
+<span  id="ored____"><svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down" focusable="false" ><use data-href="https://www.ntnu.edu/o/ntnu-theme/images/lexicon/icons.svg#angle-down"></use></svg></span>            </span>
+</span>
+            </a>
+              <ul aria-expanded="false" class="child-menu dropdown-menu" role="menu">
+                    <li id="gmenuitem_1_0_Contact_us" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_0_Contact_us" class="dropdown-item" href="/contact"  role="menuitem">Contact us</a>
+                    </li>
+                    <li id="gmenuitem_1_1_Faculties_and_departments" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_1_Faculties_and_departments" class="dropdown-item" href="/faculties"  role="menuitem">Faculties and departments</a>
+                    </li>
+                    <li id="gmenuitem_1_2_Libraries" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_2_Libraries" class="dropdown-item" href="/ub"  role="menuitem">Libraries</a>
+                    </li>
+                    <li id="gmenuitem_1_3_International_researcher_support" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_3_International_researcher_support" class="dropdown-item" href="/nirs"  role="menuitem">International researcher support</a>
+                    </li>
+                    <li id="gmenuitem_1_4_Vacancies" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_4_Vacancies" class="dropdown-item" href="/vacancies"  role="menuitem">Vacancies</a>
+                    </li>
+                    <li id="gmenuitem_1_5_About_NTNU" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_5_About_NTNU" class="dropdown-item" href="/about"  role="menuitem">About NTNU</a>
+                    </li>
+                    <li id="gmenuitem_1_6_Maps" role="presentation">
+                      <a aria-labelledby="gmenuitem_1_6_Maps" class="dropdown-item" href="/map"  role="menuitem">Maps</a>
+                    </li>
+              </ul>
+          </li>
+</ul>
+
+
+
+	</div>
+
+	<div aria-expanded="false" class="collapse navbar-collapse justify-content-end" id="searchCollapse">
+		<div class="justify-content-end navbar-form my-2 my-md-0" role="search">
+		</div>
+		<div class="justify-content-end navbar-form my-2 my-md-0" role="search">
+			<form action="/sok" method="get" class="col-12">
+				<fieldset class="fieldset">
+					<div class="input-group search-bar search-bar-simple">
+						<div class="input-group-item search-bar-keywords-input-wrapper">
+							<input id="ntnu-search" name="query" placeholder="Search..." title="Search" type="text" value="" aria-label="Search" class="form-control input-group-inset input-group-inset-after search-bar-keywords-input">
+							<div class="input-group-inset-item input-group-inset-item-after search-bar-search-button-wrapper">
+								<button id="ntnu-search-act" class="btn search-bar-search-button btn-unstyled" aria-label="Submit" type="submit">
+									<svg class="lexicon-icon lexicon-icon-search" focusable="false" role="presentation" viewBox="0 0 512 512">
+										<path class="lexicon-icon-outline" d="M503.254 467.861l-133.645-133.645c27.671-35.13 44.344-79.327 44.344-127.415 0-113.784-92.578-206.362-206.362-206.362s-206.362 92.578-206.362 206.362 92.578 206.362 206.362 206.362c47.268 0 90.735-16.146 125.572-42.969l133.851 133.851c5.002 5.002 11.554 7.488 18.106 7.488s13.104-2.486 18.106-7.488c10.004-10.003 10.004-26.209 0.029-36.183zM52.446 206.801c0-85.558 69.616-155.173 155.173-155.173s155.174 69.616 155.174 155.173-69.616 155.173-155.173 155.173-155.173-69.616-155.173-155.173z"></path>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<script>
+	$(document).ready(function() {
+	// Toggle navigation icon
+	$('#navigationCollapse').on('show.bs.collapse', function () {
+		$('#nav-toggle-btn i').removeClass('fa-bars').addClass('fa-times');
+	}).on('hide.bs.collapse', function () {
+		$('#nav-toggle-btn i').removeClass('fa-times').addClass('fa-bars');
+	});
+
+	// Toggle search icon
+	$('#searchCollapse').on('show.bs.collapse', function () {
+		$('#search-toggle-btn i').removeClass('fa-search').addClass('fa-times');
+	}).on('hide.bs.collapse', function () {
+		$('#search-toggle-btn i').removeClass('fa-times').addClass('fa-search');
+	});
+
+	});
+	</script>
+
+		</div>
+	</div>
+	
+	<nav id="breadcrumbs">
+		<div class="container">
+			<div class="d-flex flex-column flex-sm-row align-items-stretch container">
+				<nav class="ntnu-crumbs flex-grow w-100">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_ntnubreadcrumbportlet_WAR_ntnubreadcrumbportlet_  portlet-static portlet-static-end portlet-barebone  " id="p_p_id_ntnubreadcrumbportlet_WAR_ntnubreadcrumbportlet_INSTANCE_abcd_" >
+		<span id="p_ntnubreadcrumbportlet_WAR_ntnubreadcrumbportlet_INSTANCE_abcd"></span>
+
+
+
+
+	
+
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+
+		
+<section class="portlet" id="portlet_ntnubreadcrumbportlet_WAR_ntnubreadcrumbportlet_INSTANCE_abcd">
+
+
+	<div class="portlet-content">
+
+
+
+		
+			<div class=" portlet-content-container" >
+				
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+						
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        <ol class="breadcrumb">
+            
+                <li class="breadcrumb-item">
+                    <a class="breadcrumb-link" href="/" title="Home">
+                        <div class="breadcrumb-flex-wrapper">
+                            <span class="breadcrumb-text-truncate">Home</span>
+                        </div>
+                    </a>
+                </li>
+            
+
+            
+                
+                    
+                    
+                    
+                        <li class="breadcrumb-item">
+                            <a class="breadcrumb-link" href="/studies" title="Studies">
+                                <div class="breadcrumb-flex-wrapper">
+                                    <span class="breadcrumb-text-truncate">Studies</span>
+                                </div>
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li class="active breadcrumb-item">
+                            <div class="breadcrumb-flex-wrapper">
+                                <span class="breadcrumb-text-truncate" title="All courses">All courses</span>
+                            </div>
+                        </li>
+                    
+                    
+                    
+                
+            
+        </ol>
+    
+
+
+	
+	
+					
+				
+			
+		
+	
+	
+
+
+	</div>
+
+			</div>
+		
+	</div>
+</section>
+
+		
+	
+
+		
+		
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+			</nav>
+
+				<div class="text-nowrap ntnu-langswitch">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_languageportlet_WAR_languageportlet_  portlet-static portlet-static-end portlet-borderless  " id="p_p_id_languageportlet_WAR_languageportlet_INSTANCE_abcd_" >
+		<span id="p_languageportlet_WAR_languageportlet_INSTANCE_abcd"></span>
+
+
+
+
+	
+
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+
+		
+<section class="portlet" id="portlet_languageportlet_WAR_languageportlet_INSTANCE_abcd">
+
+
+	<div class="portlet-content">
+
+
+			<div class="autofit-float autofit-row portlet-header">
+
+					<div class="autofit-col autofit-col-expand">
+						<h2 class="portlet-title-text">Språkvelger</h2>
+					</div>
+
+			</div>
+
+		
+			<div class=" portlet-content-container" >
+				
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+						
+
+
+	
+
+		  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="language-portlet-portlet" style="font-size: 0.875rem">
+  
+    <i class="fal fa-globe text-dark"></i>
+    <a
+      style="display: inline-flex; align-items: center; min-height: 44px"
+      class="text-dark"
+      title="Norsk versjon av siden: https://www.ntnu.no/studier/emner/TDT4100/2025"
+      href="https://www.ntnu.no/studier/emner/TDT4100/2025"
+      >Norsk</a>
+  
+  
+</div>
+
+
+	
+	
+					
+				
+			
+		
+	
+	
+
+
+	</div>
+
+			</div>
+		
+	</div>
+</section>
+
+		
+	
+
+		
+		
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+					</div>
+			</div>
+		</div>
+	</nav>
+
+</header>
+
+			<section class="" id="content">
+				<h1 class="sr-only">Course - Object-Oriented Programming - TDT4100</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="columns-1" id="main-content" role="main">
+  <div class="container">
+    <div class="portlet-layout row">
+      <div class="portlet-column portlet-column-only col-md-12" id="column-1">
+        <div class="portlet-dropzone portlet-column-content portlet-column-content-only" id="layout-column_column-1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_coursedetailsportlet_WAR_courselistportlet_  portlet-static portlet-static-end portlet-borderless  " id="p_p_id_coursedetailsportlet_WAR_courselistportlet_" >
+		<span id="p_coursedetailsportlet_WAR_courselistportlet"></span>
+
+
+
+
+	
+
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+
+		
+<section class="portlet" id="portlet_coursedetailsportlet_WAR_courselistportlet">
+
+
+	<div class="portlet-content">
+
+
+			<div class="autofit-float autofit-row portlet-header">
+
+					<div class="autofit-col autofit-col-expand">
+						<h2 class="portlet-title-text">course-details-portlet</h2>
+					</div>
+
+			</div>
+
+		
+			<div class=" portlet-content-container" >
+				
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+						
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    moment.locale("en_GB");
+</script>
+
+<div id="course-details"  data-coursecode="TDT4100">
+    
+        
+        
+        
+            <span class="course-code">TDT4100</span>
+            <h1 class="display-custom course-name ">Object-Oriented Programming</h1>
+            <label for="selectedYear" class="course-select-info">Choose study year</label>
+            <div class="yearSelect hide">
+                
+                    
+                
+                
+                <form id="_coursedetailsportlet_WAR_courselistportlet_form" name="_coursedetailsportlet_WAR_courselistportlet_form" action="https://www.ntnu.edu/web/studies/courses/-/course_details/TDT4100?p_p_lifecycle=1&amp;p_auth=xX9J0rMr" method="POST">
+
+                    
+
+                    <select id="selectedYear" name="selectedYear" class="form-control bg-info text-white">
+                        
+                            <option class="white" value="2026">
+                                Study year
+                                2026/2027
+                            </option>
+                        
+                            <option class="white" value="2025" selected="selected">
+                                Study year
+                                2025/2026
+                            </option>
+                        
+                            <option class="white" value="2024">
+                                Study year
+                                2024/2025
+                            </option>
+                        
+                            <option class="white" value="2023">
+                                Study year
+                                2023/2024
+                            </option>
+                        
+                            <option class="white" value="2022">
+                                Study year
+                                2022/2023
+                            </option>
+                        
+                            <option class="white" value="2021">
+                                Study year
+                                2021/2022
+                            </option>
+                        
+                            <option class="white" value="2020">
+                                Study year
+                                2020/2021
+                            </option>
+                        
+                            <option class="white" value="2019">
+                                Study year
+                                2019/2020
+                            </option>
+                        
+                            <option class="white" value="2018">
+                                Study year
+                                2018/2019
+                            </option>
+                        
+                            <option class="white" value="2017">
+                                Study year
+                                2017/2018
+                            </option>
+                        
+                            <option class="white" value="2016">
+                                Study year
+                                2016/2017
+                            </option>
+                        
+                            <option class="white" value="2015">
+                                Study year
+                                2015/2016
+                            </option>
+                        
+                            <option class="white" value="2014">
+                                Study year
+                                2014/2015
+                            </option>
+                        
+                            <option class="white" value="2013">
+                                Study year
+                                2013/2014
+                            </option>
+                        
+                            <option class="white" value="2012">
+                                Study year
+                                2012/2013
+                            </option>
+                        
+                            <option class="white" value="2011">
+                                Study year
+                                2011/2012
+                            </option>
+                        
+                            <option class="white" value="2010">
+                                Study year
+                                2010/2011
+                            </option>
+                        
+                            <option class="white" value="2009">
+                                Study year
+                                2009/2010
+                            </option>
+                        
+                            <option class="white" value="2008">
+                                Study year
+                                2008/2009
+                            </option>
+                        
+                            <option class="white" value="2007">
+                                Study year
+                                2007/2008
+                            </option>
+                        
+                    </select>
+                    <noscript>
+                        &nbsp;<input type="submit" name="refresh" value="Refresh">
+                    </noscript>
+                </form>
+            </div>
+
+            
+            
+
+            
+
+            
+
+            
+
+
+            
+
+            <div class="course-facts">
+                <div class="course-fact">
+                    
+                        <span class="course-fact-label">
+                            Credits
+                        </span>
+
+                        <span class="course-fact-value">
+                        
+                        
+                            
+                                
+                                
+                                    7.5
+                                
+                            
+                        
+                        </span>
+                </div>
+                <div class="course-fact">
+                    
+                    
+                        <span class="course-fact-label">Level</span>
+                        <span class="course-fact-value">
+                            Foundation courses, level I
+                        </span>
+                    
+                </div>
+                
+                    <div class="course-fact">
+                        
+                            
+                                <span class="course-fact-label">Course start</span>
+                                <span class="course-fact-value">
+                                    Spring 2026
+                                </span>
+                            
+                    </div>
+                    <div class="course-fact">
+                        
+                        
+                            <span class="course-fact-label">Duration</span>
+                            <span class="course-fact-value">
+                                1 semester
+                            </span>
+                        
+                    </div>
+                
+                
+                    <div class="course-fact">
+                        
+                        <span class="course-fact-label">
+                            Language of instruction
+                        </span>
+                        <span class="course-fact-value">
+                            Norwegian
+                        </span>
+                    </div>
+                    <div class="course-fact">
+                        
+                        
+                            <span class="course-fact-value">
+                                <span class="course-fact-label">Location</span>
+                                
+                                    
+                                        Trondheim
+                                    
+                                    
+                                    
+                                    
+                                
+                            </span>
+                        
+                    </div>
+                
+                
+                    <div class="course-fact">
+                       
+                        <span class="course-fact-label">Examination arrangement</span>
+                        <span class="course-fact-value">
+                        
+                        
+                            
+                                
+                                
+                                    
+                                
+                            
+                        
+                        
+                            Written exam
+                        
+                        </span>
+                   </div>
+                
+        </div>
+
+        <span class="course-registration-deadline">
+            
+                
+                
+                    
+                
+
+                
+            
+        </span>
+
+        <!-- FANE (1) OM -->
+        <div class="tab" id="omEmnet">
+            <div>
+    <div class="portlet-column portlet-column-first">
+        <h1 class="tabTitle" style="display: none;">About</h1>
+        <h2 class="course-about-header h1">About the course</h2>
+
+        <div class="content">
+            
+                <div id="course-content-toggler" class="mb-4">
+                    <h3 class="header-course-content">Course content</h3>
+                    <p class="content-course-content">Basic algorithms and data structures, constructs and control flow in object-oriented languages. Modularization and re-use. Standard application programmers interface (API). Unit testing, error detection and tools for this. Object-oriented design. Use of class, object, sequence and collaboration diagrams in the UML. Use of design patterns. Simple app architecture using modern GUI toolkit. Java is used as implementation language.</p>
+                </div>
+            
+
+            
+                <div id="learning-goal-toggler" class="mb-4">
+                    <h3 class="header-learning-goal">Learning outcome</h3>
+                    <p class="content-learning-goal"><p>Knowledge: The students will have knowledge about the main concepts and mechanisms in object-oriented languages and how object-oriented programs and simple apps are structured and tested.</p><p>Skills: The students will have skills in object-oriented programming and use of relevant programming methods (coding, testing and debugging) and modern development tools.</p><p>General competency: The students will be able to use object-oriented programming for solving real problems and utilise moderne development tools.</p></p>
+                </div>
+            
+
+            
+                <div id="learning-method-toggler" class="mb-4">
+                    <h3 class="header-learning-method">Learning methods and activities</h3>
+                    <p class="content-learning-method ">Lectures, exercise lectures, exercises (individually or in pairs) and project work individually or in groups.</p>
+                </div>
+             
+
+            
+                <div id="mandatory-activities-toggler" class="mb-4">
+                    <h3 class="header-mandatory-activities">Compulsory assignments</h3>
+                    <ul class="content-mandatory-activities">
+                        
+                            <li>Assignments</li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+                <div id="further-evaluation-toggler" class="mb-4 mt-3">
+                    <h3 class="header-further-evaluation">Further on evaluation</h3>
+                    
+                    <p class="content-further-evaluation"><p>The mandatory assignments are performed individually or in groups, which will be specified in the semester. </p><p>If there is a re-sit examination, the examination form may change from written to oral. The re-sit examination is held in August. </p></p>
+                </div>
+             
+
+            
+
+            
+                <div id="recommended-knowledge-toggler" class="mb-4">
+                    <h3 class="header-recommended-knowledge">Recommended previous knowledge</h3>
+                    <p class="content-recommended-knowledge">The course Information Technology, Introduction, or equivalent courses giving insight into using basic computer tools and skills in methodic problem analysis, constructing solutions and procedural programming.</p>
+                </div>
+            
+
+            
+
+            
+                <div id="course-materials-toggler" class="mb-4">
+                    <h3 class="header-course-materials">Course materials</h3>
+                    <p class="content-course-materials">Announced at the start of semester.</p>
+                </div>
+            
+
+            
+
+            
+                <div id="credit-reductions-toggler" class="mb-4">
+                    <h3 class="header-credit-reductions">Credit reductions</h3>
+
+                    <table class="details content-credit-reductions course-list-portlet-table tbl-headrow-line2" summary="Credit reductions for this course">
+                        <thead>
+                        <tr>
+                            <th>Course code</th>
+                            <th>Reduction</th>
+                            <th>From</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+                            <tr>
+                                <td>IT1104</td>
+                                <td>
+                                    
+                                        
+                                        
+                                            7.5 sp
+                                        
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>SIF8005</td>
+                                <td>
+                                    
+                                        
+                                        
+                                            7.5 sp
+                                        
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>SIF8005</td>
+                                <td>
+                                    
+                                        
+                                        
+                                            7.5 sp
+                                        
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>SIF8005</td>
+                                <td>
+                                    
+                                        
+                                        
+                                            7.5 sp
+                                        
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>TDT4102</td>
+                                <td>
+                                    
+                                        
+                                        
+                                            3.7 sp
+                                        
+                                    
+                                </td>
+                                <td>
+                                    Autumn 
+                                    2008
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>TDT4130</td>
+                                <td>
+                                    
+                                        
+                                        
+                                            3.7 sp
+                                        
+                                    
+                                </td>
+                                <td>
+                                    Autumn 
+                                    2008
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>INFT1100</td>
+                                <td>
+                                    
+                                        
+                                        
+                                            7.5 sp
+                                        
+                                    
+                                </td>
+                                <td>
+                                    Autumn 
+                                    2024
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>TDT4114</td>
+                                <td>
+                                    
+                                        
+                                        
+                                            3.7 sp
+                                        
+                                    
+                                </td>
+                                <td>
+                                    Autumn 
+                                    2024
+                                </td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+
+                    <span>
+                        
+                            
+                            
+                                This course has academic overlap with the courses in the table above. If you take overlapping courses, you will receive a credit reduction in the course where you have the lowest grade. If the grades are the same, the reduction will be applied to the course completed most recently.
+                            
+                        
+                    </span>
+                </div>
+            
+        </div>
+    </div>
+
+
+    <div class="">
+        
+            <div class="course-card course-blackboard-links">
+                <div class="course-card-body">
+                    <p>
+                        
+                            <h3>Other pages about the course</h3>
+                            <ul class="more-links-list list-unstyled">
+                                
+                                        
+                                            
+                                            <li>
+                                                <a href="https://ntnu.blackboard.com/webapps/login?action=guest_login&amp;new_loc=/webapps/blackboard/execute/courseMain?course_id=_32089_1" class="">Blackboard - SPRING-2022</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="https://ntnu.blackboard.com/webapps/login?action=guest_login&amp;new_loc=/webapps/blackboard/execute/courseMain?course_id=_22786_1" class="">Blackboard - SPRING-2021</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="https://ntnu.blackboard.com/webapps/login?action=guest_login&amp;new_loc=/webapps/blackboard/execute/courseMain?course_id=_17692_1" class="">Blackboard - SPRING-2020</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="https://ntnu.blackboard.com/webapps/login?action=guest_login&amp;new_loc=/webapps/blackboard/execute/courseMain?course_id=_12095_1" class="">Blackboard - SPRING-2019</a>
+                                            </li>
+                                            
+                                        
+                                
+                                
+                                
+                            </ul>
+                        
+                    </p>
+                </div>
+            </div>
+        
+
+        <div class="course-card">
+            
+                
+                    <div class="course-card-header"><h3>Subject areas</h3></div>
+                    <div class="course-card-body">
+                        <ul class="subject-area-list list-unstyled">
+                            
+                                
+                                    <li>Technological subjects</li>
+                                
+                            
+                        </ul>
+                    </div>
+                
+            
+        </div>
+
+        <div class="course-card">
+            <div class="course-card-header">
+                <h3>Contact information</h3>
+            </div>
+            <div class="course-card-body">
+                
+
+                
+                    <h4 class="padded">Course coordinator</h4>
+                    <ul class="person-list list-unstyled">
+                        
+                            <li>
+                                
+                                    
+                                        <a href="https://www.ntnu.edu/employees/dag.o.kjellemo">Dag Olav Kjellemo</a>
+                                    
+                                    
+                                
+                            </li>
+                        
+                    </ul>
+                
+                
+                    <h4 class="padded">Lecturers</h4>
+                    <ul class="person-list list-unstyled">
+                        
+                            <li>
+                                
+                                    
+                                        <a href="https://www.ntnu.edu/employees/borgeha">Børge Haugset</a>
+                                    
+                                    
+                                
+                            </li>
+                        
+                    </ul>
+                
+
+                
+                    <h4>Department with academic responsibility</h4>
+                    <p>
+                        <a href="/idi">Department of Computer Science</a>
+                    </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+
+        <div style="clear: both;"></div>
+
+        <!-- FANE (2) TIMEPLAN -->
+        
+            <div class="tab" id="timeplan" data-jsonurl="https://www.ntnu.edu/web/studies/courses?p_p_id=coursedetailsportlet_WAR_courselistportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_resource_id=timetable&p_p_cacheability=cacheLevelPage&_coursedetailsportlet_WAR_courselistportlet_year=2025&_coursedetailsportlet_WAR_courselistportlet_courseCode=TDT4100&year=2025&version=1" data-schedulesurl="https://www.ntnu.edu/web/studies/courses?p_p_id=coursedetailsportlet_WAR_courselistportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_resource_id=schedules&p_p_cacheability=cacheLevelPage&_coursedetailsportlet_WAR_courselistportlet_year=2025&_coursedetailsportlet_WAR_courselistportlet_courseCode=TDT4100&year=2025&version=1" data-employeeprefix=" employeepage-prefix" data-programprefix="
+            https://www.ntnu.edu/studies/" data-notfound="
+            Some courses may lack a timetable. In such cases, contact the department responsible for the course." data-showhide="
+            show/hide">
+            
+
+<div class="row-fluid timetable-container">
+    <div class="span12">
+        <h1 class="tabTitle">Timetable</h1>
+        <h2 class="course-exam-heading h1">Timetable</h2>
+
+        <div style="text-align:left" class="calendarViewLink"><a class="timetable-cal-button bold">Calendar view</a></div>
+        <div style="text-align:left" class="listViewLink"><a class="timetable-list-button">List view</a></div>
+        <div class="timetable-tp-ical" style="text-align:left">
+            <a href="https://tp.educloud.no/ntnu/timeplan/?id=TDT4100&type=course" class="tplink"> Show detailed timetable in TP</a>
+            <a href="https://tp.educloud.no/ntnu/timeplan/ical.php?sem=25h&id[0]=TDT4100&type=course" class="tplink ical"> Download .ics file iCal</a>
+        </div>
+
+        <div class="timetable" style="display: none;"></div>
+        <div class="scheduleswrap">
+            <div id="event-filter"></div>
+            <div class="schedules"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var T = T || {};
+    T.timetableFilterLabel = 'Filter on activites and groups';
+    T.timetableTiaError = 'Timetable is not available for the moment. Please try again later.';
+    T.courseMultimediaNeedauth = 'course-mutlimedia-needauth';
+    T.timetableRooms = 'Rooms ';
+    T.timetableLecturers  = 'Lecturers';
+    T.timetablePlannedFor = 'Planned for';
+
+    // Add the study programs array
+    T.studyPrograms = [];
+    
+    T.studyPrograms.push({
+      code: "MTFYMA",
+      name: "Applied Physics and Mathematics"
+    });
+    
+    T.studyPrograms.push({
+      code: "MTDT",
+      name: "Computer Science"
+    });
+    
+    T.studyPrograms.push({
+      code: "MTKOM",
+      name: "Cyber Security and Data Communication"
+    });
+    
+    T.studyPrograms.push({
+      code: "MTING",
+      name: "Engineering and ICT"
+    });
+    
+    T.studyPrograms.push({
+      code: "BIT",
+      name: "Informatics"
+    });
+    
+    T.studyPrograms.push({
+      code: "MMEDIE",
+      name: "Media, Communication and Information Technology"
+    });
+    
+    T.studyPrograms.push({
+      code: "MLREAL",
+      name: "Natural Science with Teacher Education, years 8 - 13"
+    });
+    
+
+    AUI().ready(function(A) {
+      console.log("Registering formatWeeks helper");
+
+      A.Handlebars.registerHelper('formatWeeks', function(weeks) {
+        console.log("formatWeeks called with:", weeks, typeof weeks);
+
+        // Handle all possible input types
+        if (weeks === undefined || weeks === null) {
+          return "";
+        }
+
+        var stringWeeks = String(weeks);
+        console.log("String version:", stringWeeks);
+
+        // Try both ASCII hyphen and other possible hyphen characters
+        var result = stringWeeks
+          .replace(/-/g, '–')      // Standard hyphen
+          .replace(/\u2010/g, '–') // Unicode hyphen
+          .replace(/\u2212/g, '–'); // Minus sign
+
+        console.log("Replaced result:", result);
+        return new A.Handlebars.SafeString(result);
+      });
+    });
+
+    AUI().ready(function(A) {
+      A.Handlebars.registerHelper('translateSeason', function(key) {
+        var isEnglish = Liferay.ThemeDisplay.getLanguageId().startsWith('en');
+
+        if (isEnglish) {
+          // Translate Norwegian seasons to English
+          if (key.includes('HØST')) {
+            return key.replace('HØST', 'AUTUMN');
+          } else if (key.includes('VÅR')) {
+            return key.replace('VÅR', 'SPRING');
+          } else if (key.includes('SOMMER')) {
+            return key.replace('SOMMER', 'SUMMER');
+          }
+        }
+
+        // Return original key if not English or no match
+        return key;
+      });
+    });
+
+    AUI().ready(function(A) {
+      A.Handlebars.registerHelper('replace', function(string, search, replace) {
+        if (string && typeof string === 'string') {
+          return string.replace(search, replace);
+        }
+        return string;
+      });
+    });
+
+    AUI().ready(function(A) {
+      A.Handlebars.registerHelper('lookupProgramName', function(code) {
+
+        if (code === 'ALLE' && (Liferay.ThemeDisplay.getLanguageId() === 'en_US' || Liferay.ThemeDisplay.getLanguageId() === 'en_GB')) {
+          return 'ALL';
+        }
+
+        var program = T.studyPrograms.find(function(program) {
+          return program.code === code;
+        });
+        return program ? program.name : code;
+      });
+
+      A.Handlebars.registerHelper('eq', function(a, b) {
+        return a === b;
+      });
+
+      A.Handlebars.registerHelper('or', function() {
+        for (var i = 0; i < arguments.length - 1; i++) {
+          if (arguments[i]) {
+            return true;
+          }
+        }
+        return false;
+      });
+    });
+
+    console.log("Study programs:", T.studyPrograms);
+</script>
+
+<script type="text/handlebars" id="eventFilter">
+    <div class="timetable-filter-group">
+        <label class="timetable-filters-label">{{label}}</label>
+        <select class="filter-on {{className}}" {{#if multiple}}multiple{{/if}}>
+            {{#each opts}}
+            <option value="{{this}}">{{lookupProgramName this}}
+            {{#unless (or (eq this "ALL") (eq this "ALLE") (eq (lookupProgramName this) this))}}
+                ({{this}})
+            {{/unless}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+</script>
+
+<script type="text/handlebars" id="timeplanTemplate">
+    <div class="programme-container">
+        <div class="studyprogramme-select">
+            {{#if programmes.length}}
+                <label for="programme-select">Studyprogramme</label>
+                <select id="programme-select" class="programme programs-on">
+                {{#each programmes}}
+                <option value="{{code}}">{{lookupProgramName name}}
+                    {{#unless (or (eq this "ALL") (eq this "ALLE") (eq (lookupProgramName this) this))}}
+                        ({{name}})
+                    {{/unless}}
+                </option>
+                {{/each}}
+            </select>
+            {{/if}}
+        </div>
+    </div>
+    {{#each timeplan}}
+    <h3 class="timeplan-table-year-term">{{translateSeason @key}}</h3>
+    <div class="wrap">
+        <table class="time tbl-simple-light2">
+            <thead>
+            <tr>
+                <th class="date">Day</th>
+                <th class="time">Time</th>
+                <th class="weeks">Weeks </th>
+                <th class="type">Type</th>
+                <th class="planned">Planned for</th>
+                <!-- th>Lecturer</th -->
+                <th class="room">Room</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each this}}
+            <tr class="{{css}}">
+                <td class="day">{{day}}</td>
+                <td>{{from}} – {{to}}</td>
+                <td>{{formatWeeks weeks}}</td>
+                <td>{{title}}</td>
+                <td class="programmes">
+                    {{#each studyProgramKeys}}{{#if @index}}, {{/if}}<a title="{{name}}" class="programCode" href="https://www.ntnu.edu/studies/{{code}}">{{name}}</a>{{/each}}
+                </td>
+                <!-- td>{{staff}}</td -->
+                <td>{{#each rooms}}{{#if @index}}, {{/if}}
+                    <span>
+                        {{#if url}}
+                          <a href="{{replace url "http:" "https:"}}">{{room}} {{bygningsNavn}}</a>
+                        {{else}}
+                          {{room}} {{building}}
+                        {{/if}}
+                    </span>
+                    {{/each}}
+                </td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{/each}}
+</script>
+
+<script type="text/handlebars" id="notimeplanTemplate">
+    <p>Some courses may lack a timetable. In such cases, contact the department responsible for the course.</p>
+</script>
+            </div>
+            <div style="clear: both;"></div>
+        
+
+        <!-- FANE (3) EKSAMEN -->
+        <div class="tab" id="omEksamen" data-jsonurl="https://www.ntnu.edu/web/studies/courses?p_p_id=coursedetailsportlet_WAR_courselistportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_resource_id=building&p_p_cacheability=cacheLevelPage&_coursedetailsportlet_WAR_courselistportlet_year=2025&_coursedetailsportlet_WAR_courselistportlet_courseCode=TDT4100&buildings=485, 360">
+        
+
+
+
+
+<div class="">
+    <div class="">
+        <h1 class="tabTitle">Examination</h1>
+        <h2 class="course-exam-heading h1">Examination</h2>
+
+        <div class="content">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+            
+                
+                    
+                        
+                            
+                            
+                        
+                        
+                    
+                
+
+                
+                    
+                        
+                            
+                            
+                        
+                        
+                    
+                
+
+            
+                
+                    
+                        
+                        
+                    
+                
+
+                
+                    
+                        
+                        
+                    
+                
+
+            
+                
+                    
+                        
+                        
+                    
+                
+
+                
+                    
+                        
+                        
+                    
+                
+
+            
+
+
+        
+        
+        
+
+        
+            
+                <div class="exam-assessment-form-general">Examination arrangement:&nbsp;Written exam</div>
+            
+
+            
+                <div class="grade-rule-heading">
+                    
+                        
+                        
+                            Grade: Letter grades<br />
+                            
+                        
+                    
+                </div>
+            
+
+            
+
+            <div class="exam-information">
+                
+
+                
+                    <div class="exam-element">
+                        
+
+                        
+
+                            <h4 class="h3 course-exam-heading2">New examination - Spring 2026</h4>
+                        
+                        <h5 class="h4 exam-form">Written exam
+                            
+                        </h5>
+
+                        <div class="exam-container">
+                            
+                            
+
+                            
+                            <span class="exam-item exam-fact-label">Weighting</span>
+                            <span class="exam-item">100/100</span>
+
+                            
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">
+                                    Examination aids
+                                </span>
+                                <span class="exam-item">
+                                    
+                                        
+                                            
+                                                <a href="https://i.ntnu.no/wiki/-/wiki/English/Permitted+examination+aids" title="Specified written or handwritten examination support material is permitted. Specified simple calculator is permitted.">
+                                                    Code C</a>
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                
+                                    <span class="exam-item exam-fact-label">
+                                        Date
+                                    </span>
+                                    <span class="exam-item">
+                                        
+                                        
+                                            
+                                            
+                                            2026-05-18
+                                        
+                                    </span>
+                                
+                                
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">Time</span>
+                                <span class="exam-item">
+                                    
+                                        15:00
+                                    
+                                    
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">
+                                        Duration
+                                </span>
+                                <span class="exam-item">
+                                    
+                                        4 hours 
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">
+                                        Exam system
+                                </span>
+                                <span class="exam-item">
+                                    
+                                         
+                                             
+                                                 <a href="https://i.ntnu.no/en/eksamen">
+                                                 Inspera Assessment
+                                             
+                                             
+                                             
+                                         
+                                        </a>
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                <div class="d-lg-block exam-rooms">
+                                    <span class="exam-rooms-button" onclick="toggleRooms(this)">
+                                        <button class="toggle-icon" type="button">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                        Place and room for written exam
+                                    </span>
+
+                                    <div class="d-none room-list">
+                                        
+
+                                        
+                                            <p class="portlet-msg-info exam-location-exists-info mt-4">
+                                               The specified room can be changed and the final location will be ready no later than 3 days before the exam. You can find your room location on Studentweb.
+                                            </p>
+                                        
+
+                                        
+                                            
+                                                <div class="exam-building">
+                                                    <span class="exam-fact-location-label building-code-485">Sluppenvegen 14</span>
+                                                    
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL238</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                21 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL310 blå sone</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                11 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL310 hvit sone</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                46 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL310 lilla sone</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                80 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL310 turkis sone</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                59 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL321</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                2 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+                                                </div>
+                                            
+
+                                        
+
+                                    </div>
+                                </div>
+                            
+
+                            
+
+                        </div>
+                    </div>
+
+
+                    
+
+                
+                    <div class="exam-element">
+                        
+
+                        
+
+                            <h4 class="h3 course-exam-heading2">Ordinary examination - Spring 2026</h4>
+                        
+                        <h5 class="h4 exam-form">Written exam
+                            
+                        </h5>
+
+                        <div class="exam-container">
+                            
+                            
+
+                            
+                            <span class="exam-item exam-fact-label">Weighting</span>
+                            <span class="exam-item">100/100</span>
+
+                            
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">
+                                    Examination aids
+                                </span>
+                                <span class="exam-item">
+                                    
+                                        
+                                            
+                                                <a href="https://i.ntnu.no/wiki/-/wiki/English/Permitted+examination+aids" title="Specified written or handwritten examination support material is permitted. Specified simple calculator is permitted.">
+                                                    Code C</a>
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                
+                                    <span class="exam-item exam-fact-label">
+                                        Date
+                                    </span>
+                                    <span class="exam-item">
+                                        
+                                        
+                                            
+                                            
+                                            2026-05-18
+                                        
+                                    </span>
+                                
+                                
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">Time</span>
+                                <span class="exam-item">
+                                    
+                                        09:00
+                                    
+                                    
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">
+                                        Duration
+                                </span>
+                                <span class="exam-item">
+                                    
+                                        4 hours 
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">
+                                        Exam system
+                                </span>
+                                <span class="exam-item">
+                                    
+                                         
+                                             
+                                                 <a href="https://i.ntnu.no/en/eksamen">
+                                                 Inspera Assessment
+                                             
+                                             
+                                             
+                                         
+                                        </a>
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                <div class="d-lg-block exam-rooms">
+                                    <span class="exam-rooms-button" onclick="toggleRooms(this)">
+                                        <button class="toggle-icon" type="button">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                        Place and room for written exam
+                                    </span>
+
+                                    <div class="d-none room-list">
+                                        
+
+                                        
+                                            <p class="portlet-msg-info exam-location-exists-info mt-4">
+                                               The specified room can be changed and the final location will be ready no later than 3 days before the exam. You can find your room location on Studentweb.
+                                            </p>
+                                        
+
+                                        
+                                            
+                                                <div class="exam-building">
+                                                    <span class="exam-fact-location-label building-code-360">Realfagbygget</span>
+                                                    
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>D1-151</span>
+                                                
+                                            </div>
+                                            
+                                                </div>
+                                            
+
+                                        
+                                            
+                                                <div class="exam-building">
+                                                    <span class="exam-fact-location-label building-code-485">Sluppenvegen 14</span>
+                                                    
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL228</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                6 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL238</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                28 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL310 hvit sone</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                46 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL310 lilla sone</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                80 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL310 turkis sone</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                59 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL311 brun sone</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                82 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL311 grønn sone</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                68 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL317</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                                1 candidate
+                                                            
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL318</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                                1 candidate
+                                                            
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+
+                                        
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL515</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                9 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+                                                </div>
+                                            
+
+                                        
+
+                                    </div>
+                                </div>
+                            
+
+                            
+
+                        </div>
+                    </div>
+
+
+                    
+
+                
+                    <div class="exam-element">
+                        
+
+                        
+
+                            <h4 class="h3 course-exam-heading2">Re-sit examination - Summer 2026</h4>
+                        
+                        <h5 class="h4 exam-form">Written exam
+                            
+                        </h5>
+
+                        <div class="exam-container">
+                            
+                            
+
+                            
+                            <span class="exam-item exam-fact-label">Weighting</span>
+                            <span class="exam-item">100/100</span>
+
+                            
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">
+                                    Examination aids
+                                </span>
+                                <span class="exam-item">
+                                    
+                                        
+                                            
+                                                <a href="https://i.ntnu.no/wiki/-/wiki/English/Permitted+examination+aids" title="Specified written or handwritten examination support material is permitted. Specified simple calculator is permitted.">
+                                                    Code C</a>
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                
+                                    <span class="exam-item exam-fact-label">
+                                        Date
+                                    </span>
+                                    <span class="exam-item">
+                                        
+                                        
+                                            
+                                            
+                                            2026-08-14
+                                        
+                                    </span>
+                                
+                                
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">Time</span>
+                                <span class="exam-item">
+                                    
+                                        09:00
+                                    
+                                    
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">
+                                        Duration
+                                </span>
+                                <span class="exam-item">
+                                    
+                                        4 hours 
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                <span class="exam-item exam-fact-label">
+                                        Exam system
+                                </span>
+                                <span class="exam-item">
+                                    
+                                         
+                                             
+                                                 <a href="https://i.ntnu.no/en/eksamen">
+                                                 Inspera Assessment
+                                             
+                                             
+                                             
+                                         
+                                        </a>
+                                    
+                                </span>
+                            
+
+                            
+                            
+                                <div class="d-lg-block exam-rooms">
+                                    <span class="exam-rooms-button" onclick="toggleRooms(this)">
+                                        <button class="toggle-icon" type="button">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                        Place and room for written exam
+                                    </span>
+
+                                    <div class="d-none room-list">
+                                        
+
+                                        
+                                            <p class="portlet-msg-info exam-location-exists-info mt-4">
+                                               The specified room can be changed and the final location will be ready no later than 3 days before the exam. You can find your room location on Studentweb.
+                                            </p>
+                                        
+
+                                        
+                                            
+                                                <div class="exam-building">
+                                                    <span class="exam-fact-location-label building-code-485">Sluppenvegen 14</span>
+                                                    
+                                            
+                                            <div class="exam-room">
+                                                Room
+                                                <span>SL311 lyseblå sone</span>
+                                                
+                                                    <div>
+                                                        
+                                                            
+                                                            
+                                                                84 candidates
+                                                            
+                                                        
+                                                    </div>
+                                                
+                                            </div>
+                                            
+                                                </div>
+                                            
+
+                                        
+
+                                    </div>
+                                </div>
+                            
+
+                            
+
+                        </div>
+                    </div>
+
+
+                    
+
+                
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="exam-link">
+        <p>
+            <a href="https://i.ntnu.no/en/eksamen">All about examinations at NTNU</a>
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+  function toggleRooms(target) {
+    const examRoomsDiv = $(target).closest(".exam-rooms");
+    const examRoomsButton = examRoomsDiv.find("button");
+    const roomListDivs = examRoomsDiv.find("div.room-list");
+    roomListDivs.toggleClass("d-none");
+    examRoomsButton.toggleClass("active");
+    examRoomsButton.find("i").toggleClass("fa-plus fa-minus");
+  }
+</script>
+        </div>
+        <div style="clear: both;"></div>
+
+        
+    
+</div>
+
+	
+	
+					
+				
+			
+		
+	
+	
+
+
+	</div>
+
+			</div>
+		
+	</div>
+</section>
+
+		
+	
+
+		
+		
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_globalalertportlet_WAR_globalalertportlet_  portlet-static portlet-static-end portlet-borderless  " id="p_p_id_globalalertportlet_WAR_globalalertportlet_" >
+		<span id="p_globalalertportlet_WAR_globalalertportlet"></span>
+
+
+
+
+	
+
+	
+		
+			
+		
+	
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+<form action="#" aria-hidden="true" class="hide" id="hrefFm" method="post" name="hrefFm"><span></span><input hidden type="submit"/></form>			</section>
+
+<footer id="blue-footer">
+    <div class="container">
+    <div>
+        <h3 class="mb-4">NTNU – Norwegian University of Science and Technology</h3>
+        <ul class="horizontal-list">
+            <li><a href="https://i.ntnu.no/en/ansatt">For employees</a></li>
+            <span class="divider">|</span>
+            <li><a href="https://i.ntnu.no/en/student">For students</a></li>
+            <span class="divider">|</span>
+            <li><a href="https://innsida.ntnu.no/">Intranet</a></li>
+            <span class="divider">|</span>
+            <li><a href="https://canvas.ntnu.no">Canvas</a></li>
+        </ul>
+    </div>
+    <div class="link-grid">
+                    <section class="accordion">
+                <button id="accordion-header-0" class="accordion-header" aria-label="Toggle Studies section" aria-controls="accordion-body-0" aria-expanded="false">
+                    <h3 class="h3">Studies</h3>
+                    <i class="fas fa-chevron-down accordion-arrow" aria-hidden="true"></i>
+                </button>
+                <h3 class="h3 mb-2 desktop-header">Studies</h3>
+                <ul id="accordion-body-0" class="accordion-body" aria-labelledby="accordion-header-0">
+                        <li><a href="https://www.ntnu.edu/studies/international/master">Master's programmes in English</a></li>
+                        <li><a href="https://www.ntnu.edu/studies/exchange">For exchange students</a></li>
+                        <li><a href="https://www.ntnu.edu/phd">PhD opportunities</a></li>
+                        <li><a href="https://www.ntnu.edu/studies/courses">Courses</a></li>
+                        <li><a href="https://www.ntnu.edu/career">Career development</a></li>
+                        <li><a href="https://www.ntnu.edu/continuing-education">Continuing education</a></li>
+                        <li><a href="https://www.ntnu.edu/studies/application">Application process</a></li>
+                </ul>
+            </section>
+            <section class="accordion">
+                <button id="accordion-header-1" class="accordion-header" aria-label="Toggle News section" aria-controls="accordion-body-1" aria-expanded="false">
+                    <h3 class="h3">News</h3>
+                    <i class="fas fa-chevron-down accordion-arrow" aria-hidden="true"></i>
+                </button>
+                <h3 class="h3 mb-2 desktop-header">News</h3>
+                <ul id="accordion-body-1" class="accordion-body" aria-labelledby="accordion-header-1">
+                        <li><a href="https://nyheter.ntnu.no/en/">NTNU News</a></li>
+                        <li><a href="https://www.ntnu.edu/vacancies">Vacancies</a></li>
+                </ul>
+            </section>
+            <section class="accordion">
+                <button id="accordion-header-2" class="accordion-header" aria-label="Toggle About NTNU section" aria-controls="accordion-body-2" aria-expanded="false">
+                    <h3 class="h3">About NTNU</h3>
+                    <i class="fas fa-chevron-down accordion-arrow" aria-hidden="true"></i>
+                </button>
+                <h3 class="h3 mb-2 desktop-header">About NTNU</h3>
+                <ul id="accordion-body-2" class="accordion-body" aria-labelledby="accordion-header-2">
+                        <li><a href="https://www.ntnu.edu/about">About the university</a></li>
+                        <li><a href="https://www.ntnu.edu/ub">Libraries</a></li>
+                        <li><a href="https://www.ntnu.edu/strategy">NTNU's strategy</a></li>
+                        <li><a href="https://www.ntnu.edu/research/research-excellence">Research excellence</a></li>
+                        <li><a href="https://www.ntnu.edu/research/strategicareas">Strategic research areas</a></li>
+                        <li><a href="https://www.ntnu.edu/organizational-chart">Organizational chart</a></li>
+                </ul>
+            </section>
+            <section class="accordion">
+                <button id="accordion-header-3" class="accordion-header" aria-label="Toggle Contact section" aria-controls="accordion-body-3" aria-expanded="false">
+                    <h3 class="h3">Contact</h3>
+                    <i class="fas fa-chevron-down accordion-arrow" aria-hidden="true"></i>
+                </button>
+                <h3 class="h3 mb-2 desktop-header">Contact</h3>
+                <ul id="accordion-body-3" class="accordion-body" aria-labelledby="accordion-header-3">
+                        <li><a href="https://www.ntnu.edu/contact">Contact NTNU</a></li>
+                        <li><a href="https://www.ntnu.edu/employees">Employees</a></li>
+                        <li><a href="https://www.ntnu.no/eksperter?l=en">Find experts</a></li>
+                        <li><a href="https://www.ntnu.edu/contact/press-contacts">Press contacts</a></li>
+                        <li><a href="https://www.ntnu.edu/nirs">Researcher support</a></li>
+                        <li><a href="https://www.ntnu.edu/map">Maps</a></li>
+                </ul>
+            </section>
+            <section class="accordion">
+                <button id="accordion-header-4" class="accordion-header" aria-label="Toggle NTNU in three cities section" aria-controls="accordion-body-4" aria-expanded="false">
+                    <h3 class="h3">NTNU in three cities</h3>
+                    <i class="fas fa-chevron-down accordion-arrow" aria-hidden="true"></i>
+                </button>
+                <h3 class="h3 mb-2 desktop-header">NTNU in three cities</h3>
+                <ul id="accordion-body-4" class="accordion-body" aria-labelledby="accordion-header-4">
+                        <li><a href="https://www.ntnu.edu/gjovik">NTNU in Gjøvik</a></li>
+                        <li><a href="https://www.ntnu.edu/trondheim">NTNU in Trondheim</a></li>
+                        <li><a href="https://www.ntnu.edu/alesund">NTNU in Ålesund</a></li>
+                </ul>
+            </section>
+            <section class="accordion">
+                <button id="accordion-header-5" class="accordion-header" aria-label="Toggle About this website section" aria-controls="accordion-body-5" aria-expanded="false">
+                    <h3 class="h3">About this website</h3>
+                    <i class="fas fa-chevron-down accordion-arrow" aria-hidden="true"></i>
+                </button>
+                <h3 class="h3 mb-2 desktop-header">About this website</h3>
+                <ul id="accordion-body-5" class="accordion-body" aria-labelledby="accordion-header-5">
+                        <li><a href="https://www.ntnu.edu/cookies">Use of cookies</a></li>
+                        <li><a href="https://uustatus.no/nb/erklaringer/publisert/d951cfd8-4f0e-4b81-bd0d-731368d12091">Accessibility statement</a></li>
+                        <li><a href="https://www.ntnu.edu/privacy">Privacy policy</a></li>
+                        <li><a href="https://www.ntnu.edu/about-this-site">Editorial responsibility</a></li>
+                </ul>
+            </section>
+    </div>
+    <div>
+        <a class="social-icon" href="https://www.facebook.com/ntnu.no" title="NTNU's official Facebook">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span>
+        </a>
+
+        <a class="social-icon" href="https://www.instagram.com/ntnu" title="NTNU's official Instagramkonto">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <span class="sr-only">Instagram</span>
+        </a>
+
+        <a class="social-icon" href="https://www.linkedin.com/school/ntnu" title="NTNU's official Linkedin">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+            <span class="sr-only">Linkedin</span>
+        </a>
+
+        <a class="social-icon" href="https://www.snapchat.com/add/ntnuoffisiell" title="NTNU's official Snapchat">
+            <i class="fab fa-snapchat" aria-hidden="true"></i>
+            <span class="sr-only">Snapchat</span>
+        </a>
+
+        <a class="social-icon" href="https://www.tiktok.com/@ntnu" title="NTNU's official Tiktok">
+            <i class="fab fa-tiktok" aria-hidden="true"></i>
+            <span class="sr-only">Tiktok</span>
+        </a>
+            
+        <a class="social-icon" href="https://www.youtube.com/user/ntnuinfo" title="NTNU's official Youtubekonto">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+            <span class="sr-only">Youtube</span>
+        </a>
+    </div>
+    <div class="end">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet_  portlet-static portlet-static-end portlet-borderless portlet-user-personal-bar " id="p_p_id_com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet_" >
+		<span id="p_com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet"></span>
+
+
+
+
+	
+
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+		
+
+		<span class="sign-in text-default" role="presentation">
+			<a href="https://www.ntnu.edu/c/portal/login?p_l_id=18084567" class="sign-in text-default" id="_com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet_fehs____" data-redirect="false" ><svg aria-hidden="true" class="lexicon-icon lexicon-icon-user" focusable="false" ><use data-href="https://www.ntnu.edu/o/ntnu-theme/images/lexicon/icons.svg#user"></use></svg><span class="taglib-icon-label">Sign In</span></a>
+		</span>
+	
+
+		
+	
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+        <img src="https://www.ntnu.edu/o/ntnu-theme/images/logo_ntnu_tag_english.svg" alt="NTNU logo" class="ntnu-logo"/>
+    </div>
+</div>
+</footer>		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+	
+
+
+
+	
+
+		<link href="/combo?browserId=other&amp;minifierType=&amp;themeId=ntnutheme_WAR_ntnutheme&amp;languageId=en_GB&amp;b=7110&amp;coursedetailsportlet_WAR_courselistportlet:%2Fcss%2Ffullcalendar.min.css&amp;coursedetailsportlet_WAR_courselistportlet:%2Fcss%2Fchosen.css&amp;coursedetailsportlet_WAR_courselistportlet:%2Fcss%2Fstyle.css&amp;coursedetailsportlet_WAR_courselistportlet:%2Fcss%2Fjquery-ui.min.css&amp;t=1782308786000" rel="stylesheet" type="text/css" />
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+	
+
+
+
+	
+
+		<script src="/combo?browserId=other&amp;minifierType=&amp;themeId=ntnutheme_WAR_ntnutheme&amp;languageId=en_GB&amp;b=7110&amp;coursedetailsportlet_WAR_courselistportlet:%2Fjs%2Flib%2Fjquery-ui-1.12.1.min.js&amp;coursedetailsportlet_WAR_courselistportlet:%2Fjs%2Flib%2Fjquery.tablesorter.js&amp;coursedetailsportlet_WAR_courselistportlet:%2Fjs%2Flib%2Fchosen.jquery.min.js&amp;coursedetailsportlet_WAR_courselistportlet:%2Fjs%2Flib%2Ffullcalendar.min.js&amp;coursedetailsportlet_WAR_courselistportlet:%2Fjs%2Flib%2Ffullcalendar-nb.js&amp;coursedetailsportlet_WAR_courselistportlet:%2Fjs%2FallDev.js&amp;t=1782308786000" type="text/javascript"></script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+// <![CDATA[
+
+	
+		
+
+			
+
+			
+		
+	
+
+	Liferay.BrowserSelectors.run();
+
+// ]]>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	// <![CDATA[
+
+		
+
+		Liferay.currentURL = '\x2fweb\x2fstudies\x2fcourses\x2f-\x2fcourse_details\x2fTDT4100\x2f2025';
+		Liferay.currentURLEncoded = '\x252Fweb\x252Fstudies\x252Fcourses\x252F-\x252Fcourse_details\x252FTDT4100\x252F2025';
+
+	// ]]>
+</script>
+
+
+
+	
+
+	
+
+	<script type="text/javascript">
+		// <![CDATA[
+			
+
+			
+		// ]]>
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+		
+
+		
+	
+
+
+<script type="text/javascript">
+// <![CDATA[
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onShare = function(data) {
+		if (window.Analytics) {
+			Analytics.send(
+				'shared',
+				'SocialBookmarks',
+				{
+					className: data.className,
+					classPK: data.classPK,
+					type: data.type,
+					url: data.url
+				}
+			);
+		}
+	}
+
+	var onDestroyPortlet = function() {
+		Liferay.detach('socialBookmarks:share', onShare);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	}
+
+	Liferay.on('socialBookmarks:share', onShare);
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+})();(function() {var $ = AUI.$;var _ = AUI._;
+	var pathnameRegexp = /\/documents\/(\d+)\/(\d+)\/(.+?)\/([^&]+)/;
+
+	function handleDownloadClick(event) {
+		if (event.target.nodeName.toLowerCase() === 'a') {
+			if (window.Analytics) {
+				var anchor = event.target;
+				var match = pathnameRegexp.exec(anchor.pathname);
+
+				if (match) {
+					var getParameterValue = function(parameterName) {
+						var result = null;
+						var tmp = [];
+
+						anchor
+							.search
+							.substr(1)
+							.split("&")
+							.forEach(
+								function(item) {
+									tmp = item.split("=");
+									if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+								}
+							);
+						return result;
+					}
+
+					var groupId = match[1];
+					var fileEntryUUID = match[4];
+
+					fetch(
+						'https://www.ntnu.edu/o/document_library/analytics/resolve_file_entry?groupId=' + encodeURIComponent(groupId) + '&uuid=' + encodeURIComponent(fileEntryUUID),
+						{
+							credentials: 'include',
+							method: 'GET'
+						}
+					).then(function(response) {
+						return response.json();
+					}).then(function(response) {
+						Analytics.send(
+							'documentDownloaded',
+							'Document',
+							{
+								groupId: groupId,
+								fileEntryId: response.fileEntryId,
+								preview: !!window._com_liferay_document_library_analytics_isViewFileEntry,
+								title: decodeURIComponent(match[3].replace(/\+/ig, ' ')),
+								version: getParameterValue('version')
+							}
+						);
+					}).catch(function() {
+						return;
+					});
+				}
+			}
+		}
+	}
+
+	document.body.addEventListener('click', handleDownloadClick);
+
+	var onDestroyPortlet = function() {
+		document.body.removeEventListener('click', handleDownloadClick);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	}
+
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+})();(function() {var $ = AUI.$;var _ = AUI._;
+	var onDestroyPortlet = function() {
+		Liferay.detach('messagePosted', onMessagePosted);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	}
+
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+
+	var onMessagePosted = function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'posted',
+				'Comment',
+				{
+					className: event.className,
+					classPK: event.classPK,
+					commentId: event.commentId,
+					text: event.text
+				}
+			);
+		}
+	}
+
+	Liferay.on('messagePosted', onMessagePosted);
+})();(function() {var $ = AUI.$;var _ = AUI._;
+	var onVote = function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'VOTE',
+				'Ratings',
+				{
+					className: event.className,
+					classPK: event.classPK,
+					ratingType: event.ratingType,
+					score: event.score
+				}
+			);
+		}
+	}
+
+	var onDestroyPortlet = function() {
+		Liferay.detach('ratings:vote', onVote);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	}
+
+	Liferay.on('ratings:vote', onVote);
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+})();
+	if (Liferay.Data.ICONS_INLINE_SVG) {
+		svg4everybody(
+			{
+				attributeName: 'data-href',
+				polyfill: true,
+				validate: function (src, svg, use) {
+					return !src || !src.startsWith('#');
+				}
+			}
+		);
+	}
+
+	
+		Liferay.Portlet.register('languageportlet_WAR_languageportlet_INSTANCE_abcd');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_languageportlet_WAR_languageportlet_INSTANCE_abcd_',
+			portletId: 'languageportlet_WAR_languageportlet_INSTANCE_abcd',
+			refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d18084567\x26p_p_id\x3dlanguageportlet_WAR_languageportlet_INSTANCE_abcd\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fweb\x252Fstudies\x252Fcourses\x252F-\x252Fcourse_details\x252FTDT4100\x252F2025\x26settingsScope\x3dportletInstance',
+			refreshURLData: {}
+		}
+	);
+
+	
+		Liferay.Portlet.register('com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet_',
+			portletId: 'com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet',
+			refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d18084567\x26p_p_id\x3dcom_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fweb\x252Fstudies\x252Fcourses\x252F-\x252Fcourse_details\x252FTDT4100\x252F2025\x26settingsScope\x3dportletInstance',
+			refreshURLData: {}
+		}
+	);
+
+	
+		Liferay.Portlet.register('globalalertportlet_WAR_globalalertportlet');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_globalalertportlet_WAR_globalalertportlet_',
+			portletId: 'globalalertportlet_WAR_globalalertportlet',
+			refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d18084567\x26p_p_id\x3dglobalalertportlet_WAR_globalalertportlet\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fweb\x252Fstudies\x252Fcourses\x252F-\x252Fcourse_details\x252FTDT4100\x252F2025\x26settingsScope\x3dportletInstance',
+			refreshURLData: {}
+		}
+	);
+
+	
+		Liferay.Portlet.register('ntnubreadcrumbportlet_WAR_ntnubreadcrumbportlet_INSTANCE_abcd');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_ntnubreadcrumbportlet_WAR_ntnubreadcrumbportlet_INSTANCE_abcd_',
+			portletId: 'ntnubreadcrumbportlet_WAR_ntnubreadcrumbportlet_INSTANCE_abcd',
+			refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d18084567\x26p_p_id\x3dntnubreadcrumbportlet_WAR_ntnubreadcrumbportlet_INSTANCE_abcd\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fweb\x252Fstudies\x252Fcourses\x252F-\x252Fcourse_details\x252FTDT4100\x252F2025\x26settingsScope\x3dportletInstance',
+			refreshURLData: {}
+		}
+	);
+
+	
+		Liferay.Portlet.register('coursedetailsportlet_WAR_courselistportlet');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_coursedetailsportlet_WAR_courselistportlet_',
+			portletId: 'coursedetailsportlet_WAR_courselistportlet',
+			refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d18084567\x26p_p_id\x3dcoursedetailsportlet_WAR_courselistportlet\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dcolumn-1\x26p_p_col_pos\x3d0\x26p_p_col_count\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fweb\x252Fstudies\x252Fcourses\x252F-\x252Fcourse_details\x252FTDT4100\x252F2025',
+			refreshURLData: {"_coursedetailsportlet_WAR_courselistportlet_year":["2025"],"_coursedetailsportlet_WAR_courselistportlet_courseCode":["TDT4100"]}
+		}
+	);
+Liferay.Loader.require('clay-tooltip/src/ClayTooltip', function(clayTooltipSrcClayTooltip) {
+(function(){
+var ClayTooltip = clayTooltipSrcClayTooltip;
+(function() {var $ = AUI.$;var _ = AUI._;
+	if (!Liferay.Data.LFR_PORTAL_CLAY_TOOLTIP) {
+		Liferay.Data.LFR_PORTAL_CLAY_TOOLTIP = ClayTooltip.default.init(
+			{
+				selectors: [
+					'.management-bar [data-title]:not(.lfr-portal-tooltip)',
+					'.management-bar [title]:not(.lfr-portal-tooltip)'
+				]
+			}
+		);
+	}
+})();})();
+},
+function(error) {
+console.error(error);
+});AUI().use('aui-tooltip', 'liferay-menu', 'liferay-notice', 'aui-base', 'liferay-navigation-interaction', 'liferay-session', 'liferay-poller', function(A) {(function() {var $ = AUI.$;var _ = AUI._;    var navline = document.getElementById("navigation"); // Always target the main navigation container
+
+    if (navline){
+        var sticky = navline.offsetTop;
+        var logoDiv = document.getElementById("custom-logos"); // Target the specific ID
+        var headerContainer = document.querySelector('.navbar .container, .navbar .container-fluid');
+        
+        function checkSticky() {
+            if (window.pageYOffset > sticky) {
+                navline.classList.add("sticky");
+                document.body.style.paddingTop = navline.offsetHeight + "px";
+                
+                // Only hide logo div if it's group navigation (not global)
+            }
+            else {
+                navline.classList.remove("sticky");
+                document.body.style.paddingTop = "0px";
+                
+                // Only restore logo div if it's group navigation
+            }
+        }
+        window.addEventListener("scroll", checkSticky);
+    }
+
+})();(function() {var $ = AUI.$;var _ = AUI._;
+	if (A.UA.mobile) {
+		Liferay.Util.addInputCancel();
+	}
+})();(function() {var $ = AUI.$;var _ = AUI._;
+	if (!Liferay.Data.LFR_PORTAL_TOOLTIP) {
+		var triggerShowEvent = ['mouseenter', 'MSPointerDown', 'touchstart'];
+
+		if (A.UA.ios) {
+			triggerShowEvent = ['touchstart'];
+		}
+
+		Liferay.Data.LFR_PORTAL_TOOLTIP = new A.TooltipDelegate(
+			{
+				constrain: true,
+				opacity: 1,
+				trigger: '.lfr-portal-tooltip',
+				triggerHideEvent: ['click', 'mouseleave', 'MSPointerUp', 'touchend'],
+				triggerShowEvent: triggerShowEvent,
+				visible: false,
+				zIndex: Liferay.zIndex.TOOLTIP
+			}
+		);
+
+		Liferay.on(
+			'beforeNavigate',
+			function(event) {
+				Liferay.Data.LFR_PORTAL_TOOLTIP.getTooltip().hide();
+			}
+		);
+	}
+})();(function() {var $ = AUI.$;var _ = AUI._;
+	new Liferay.Menu();
+
+	var liferayNotices = Liferay.Data.notices;
+
+	for (var i = 1; i < liferayNotices.length; i++) {
+		new Liferay.Notice(liferayNotices[i]);
+	}
+
+	
+})();(function() {var $ = AUI.$;var _ = AUI._;
+			Liferay.Session = new Liferay.SessionBase(
+				{
+					autoExtend: true,
+					redirectOnExpire: false,
+					redirectUrl: 'https\x3a\x2f\x2fwww\x2entnu\x2eedu\x2fweb\x2fguest',
+					sessionLength: 900,
+					sessionTimeoutOffset: 70,
+					warningLength: 0
+				}
+			);
+
+			
+		})();});
+// ]]>
+</script>
+
+
+
+
+
+
+
+
+
+<script src="https://www.ntnu.edu/o/ntnu-theme/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=en_GB&amp;b=7110&amp;t=1782308786000" type="text/javascript"></script>
+
+
+
+
+<script type="text/javascript">
+	// <![CDATA[
+		AUI().use(
+			'aui-base',
+			function(A) {
+				var frameElement = window.frameElement;
+
+				if (frameElement && frameElement.getAttribute('id') === 'simulationDeviceIframe') {
+					A.getBody().addClass('lfr-has-simulation-panel');
+				}
+			}
+		);
+	// ]]>
+</script>
+<script>
+// siteimprüve analytics
+(function() {
+    var sz = document.createElement("script");
+    sz.type = "text/javascript";
+    sz.async = true;
+    sz.src = "//siteimproveanalytics.com/js/siteanalyze_6000120.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(sz, s);
+})();
+</script>
+
+<script>
+// skyrü SEC-106
+(function() {
+    var script = document.createElement('script');
+    script.src = 'https://survey.skyra.no/skyra-survey.js';
+    script.onload = function() {
+        window.skyra.start({
+            org: 'ntnu',
+        });
+    };
+    document.body.appendChild(script);
+})();
+</script>
+
+
+		<!-- include other additonal libs --->
+		<script src="https://www.ntnu.edu/o/ntnu-theme/js/jquery.tablesorter.js" > </script>
+		<script src="https://www.ntnu.edu/o/ntnu-theme/js/jquery.slider.js?v=4.2.17" > </script>
+	</body>
+</html>
+
+		
+	
+

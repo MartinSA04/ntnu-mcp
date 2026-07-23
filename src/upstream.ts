@@ -13,8 +13,15 @@
  * in `tools.ts` (its two client calls are inseparable there).
  */
 
-import type { CourseSearchPage, GradeRow, ScheduleActivity, TimetableEntry } from "ntnu-api";
+import type {
+  CourseDetails,
+  CourseSearchPage,
+  GradeRow,
+  ScheduleActivity,
+  TimetableEntry,
+} from "ntnu-api";
 import {
+  DETAILS_CACHE_TTL_MS,
   GRADES_CACHE_TTL_MS,
   SCHEDULE_CACHE_TTL_MS,
   SEARCH_CACHE_TTL_MS,
@@ -86,19 +93,35 @@ export async function cachedGrades(
   const key = JSON.stringify(["grades", courseCode.trim().toUpperCase(), years ?? null]);
   const hit = await deps.cache.get(key, GRADES_CACHE_TTL_MS);
   if (hit !== null) return hit as GradeRow[];
-  const value = await deps.client.grades.distribution(
-    courseCode,
-    years ? { years } : undefined,
-  );
+  const value = await deps.client.grades.distribution(courseCode, years ? { years } : undefined);
   await deps.cache.set(key, value, GRADES_CACHE_TTL_MS);
   return value;
 }
 
-/** DBH-versioned course codes for a bare code, cached 24h. */
-export async function cachedCourseVersions(
+/**
+ * A scraped course page (exams, facts, descriptions, study programs),
+ * cached 6h. `year: null` means the site's current study year — cached
+ * under its own key, since "current" changes at year rollover. The parsed
+ * `CourseDetails` is plain JSON (no `Date`s), so no KV revival is needed.
+ * A `null` result (unknown course) is cached as `"missing"` so repeated
+ * bad codes don't re-fetch the page every call.
+ */
+export async function cachedDetails(
   deps: ToolDeps,
   courseCode: string,
-): Promise<string[]> {
+  year: number | null,
+  language: "nb" | "en",
+): Promise<CourseDetails | null> {
+  const key = JSON.stringify(["details", courseCode.trim().toUpperCase(), year, language]);
+  const hit = await deps.cache.get(key, DETAILS_CACHE_TTL_MS);
+  if (hit !== null) return hit === "missing" ? null : (hit as CourseDetails);
+  const value = await deps.client.courses.details(courseCode, year ?? undefined, { language });
+  await deps.cache.set(key, value ?? "missing", DETAILS_CACHE_TTL_MS);
+  return value;
+}
+
+/** DBH-versioned course codes for a bare code, cached 24h. */
+export async function cachedCourseVersions(deps: ToolDeps, courseCode: string): Promise<string[]> {
   const key = JSON.stringify(["versions", courseCode.trim().toUpperCase()]);
   const hit = await deps.cache.get(key, GRADES_CACHE_TTL_MS);
   if (hit !== null) return hit as string[];

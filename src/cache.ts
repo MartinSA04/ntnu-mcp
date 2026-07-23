@@ -42,6 +42,12 @@ export const SCHEDULE_CACHE_TTL_MS = 60 * 60 * 1000;
 export const GRADES_CACHE_TTL_MS = 24 * 60 * 60 * 1000;
 
 /**
+ * TTL for scraped course pages — descriptions change yearly, but exam rooms
+ * publish days before the exam and notices appear mid-term, so 6 hours.
+ */
+export const DETAILS_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
+
+/**
  * The slice of Cloudflare's `KVNamespace` this cache needs, typed structurally
  * so `deps.ts`/tests don't have to load `@cloudflare/workers-types` (its
  * ambient globals clash with `@types/node` — see the split-tsconfig note in

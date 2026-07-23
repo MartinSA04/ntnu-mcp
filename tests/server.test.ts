@@ -13,7 +13,9 @@ import { describe, expect, it } from "vitest";
 import { registerTools } from "../src/mcp-tools.js";
 import { jsonResponse, loadFixture, makeDeps, routeFetch } from "./helpers.js";
 
-const EIGHT_TOOL_NAMES = [
+const TEN_TOOL_NAMES = [
+  "get_course_info",
+  "get_exam_info",
   "search_courses",
   "get_course_schedule",
   "get_weekly_timetable",
@@ -38,13 +40,13 @@ async function connectedClient(deps: Parameters<typeof registerTools>[1]) {
 }
 
 describe("registerTools", () => {
-  it("registers exactly the eight NTNU tools", async () => {
+  it("registers exactly the ten NTNU tools", async () => {
     const { fetch } = routeFetch([]);
     const deps = makeDeps(fetch);
     const { client } = await connectedClient(deps);
 
     const { tools } = await client.listTools();
-    expect(new Set(tools.map((t) => t.name))).toEqual(new Set(EIGHT_TOOL_NAMES));
+    expect(new Set(tools.map((t) => t.name))).toEqual(new Set(TEN_TOOL_NAMES));
   });
 
   it("calls search_courses end-to-end and parses the JSON text content", async () => {

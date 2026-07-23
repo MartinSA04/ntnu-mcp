@@ -70,9 +70,7 @@ function dedupeCodes(rawCodes: string[]): string[] {
 }
 
 async function compareOne(deps: ToolDeps, code: string, year: number): Promise<object> {
-  let searchHit:
-    | Awaited<ReturnType<typeof cachedSearch>>["courses"][number]
-    | undefined;
+  let searchHit: Awaited<ReturnType<typeof cachedSearch>>["courses"][number] | undefined;
   let timetable: Awaited<ReturnType<typeof cachedTimetable>> = [];
 
   try {

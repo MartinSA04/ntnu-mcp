@@ -115,9 +115,8 @@ describe("cross-tool upstream reuse", () => {
   it("revives schedule Dates after a KV round-trip", async () => {
     const kv = fakeKV();
     const warmDeps = makeDeps(
-      routeFetch([
-        { match: "schedules", respond: () => jsonResponse(loadFixture("schedules")) },
-      ]).fetch,
+      routeFetch([{ match: "schedules", respond: () => jsonResponse(loadFixture("schedules")) }])
+        .fetch,
     );
     warmDeps.cache = new TieredCache(new TTLCache(), kv);
     const first = await cachedSchedules(warmDeps, "TDT4100", 2026);

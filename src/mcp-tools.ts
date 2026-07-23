@@ -1,5 +1,5 @@
 /**
- * Registers all eight NTNU tools on an `McpServer`. Split out of `server.ts`
+ * Registers all ten NTNU tools on an `McpServer`. Split out of `server.ts`
  * so it has zero static dependency on `agents/mcp`: that package's module
  * graph transitively does a top-level `import ... from "cloudflare:email"`
  * (dead code on our path — we use none of its email-routing features), which
@@ -16,6 +16,7 @@ import { z } from "zod";
 import { compareCourses } from "./compare.js";
 import { checkTimetableConflicts } from "./conflicts.js";
 import { type ToolDeps, UpstreamError } from "./deps.js";
+import { getCourseInfo, getExamInfo } from "./details.js";
 import {
   getCourseSchedule,
   getCourseVersions,
@@ -26,7 +27,7 @@ import {
 } from "./tools.js";
 
 /**
- * Registers all eight NTNU tools on `server`, delegating to the pure tool
+ * Registers all ten NTNU tools on `server`, delegating to the pure tool
  * functions in `./tools.ts`, `./compare.ts`, and `./conflicts.ts`. Exported
  * so tests can register against a bare `McpServer` wired to fixture-backed
  * `ToolDeps`, without spinning up the Durable Object / Workers runtime.
@@ -164,6 +165,57 @@ export function registerTools(server: McpServer, deps: ToolDeps): void {
     async () => {
       try {
         return asToolResult(await getSemesters(deps));
+      } catch (err) {
+        return asToolError(err);
+      }
+    },
+  );
+
+  server.registerTool(
+    "get_course_info",
+    {
+      description:
+        "Everything about an NTNU course except exam logistics: credits, level, " +
+        "campus, language of instruction, prerequisites, mandatory activities, " +
+        "course content / learning outcomes, credit reductions ('studiepoengreduksjon'), " +
+        "which study programs the teaching is planned for, contacts, and any alert " +
+        "notices (e.g. 'no longer taught'). English text by default; pass language " +
+        "'nb' for Norwegian. Omit year for the current study year. For exam dates, " +
+        "times, aid codes, and rooms use get_exam_info.",
+      inputSchema: {
+        course_code: z.string(),
+        year: z.number().int().nullish(),
+        language: z.enum(["nb", "en"]).nullish(),
+      },
+    },
+    async ({ course_code, year, language }) => {
+      try {
+        return asToolResult(await getCourseInfo(deps, { course_code, year, language }));
+      } catch (err) {
+        return asToolError(err);
+      }
+    },
+  );
+
+  server.registerTool(
+    "get_exam_info",
+    {
+      description:
+        "Exam logistics for one or more NTNU courses in a single call: every exam " +
+        "occasion (ordinary / re-sit) with date, start time, duration, permitted-aids " +
+        "code ('hjelpemiddelkode') with its meaning, exam system, and assigned rooms. " +
+        "The way to answer 'when and where are my exams and what can I bring' for a " +
+        "whole semester at once. Rooms are only published days before the exam; " +
+        "unpublished fields are null. Omit year for the current study year.",
+      inputSchema: {
+        course_codes: z.array(z.string()).min(1),
+        year: z.number().int().nullish(),
+        language: z.enum(["nb", "en"]).nullish(),
+      },
+    },
+    async ({ course_codes, year, language }) => {
+      try {
+        return asToolResult(await getExamInfo(deps, { course_codes, year, language }));
       } catch (err) {
         return asToolError(err);
       }
