@@ -1,14 +1,15 @@
 name: Release
 
-# Publishes the MCP registry entry and creates the GitHub Release when a
-# version tag lands. The whole release flow is: `npm version
-# <patch|minor|major>` locally (its `version` script syncs server.json),
-# then `git push --follow-tags` — this workflow does the rest.
+# Deploys the Worker, publishes the MCP registry entry, and creates the
+# GitHub Release when a version tag lands — after the check suite passes.
+# The whole release flow is: `npm version <patch|minor|major>` locally (its
+# `version` script syncs server.json), then `git push --follow-tags` — this
+# workflow does the rest.
 #
-# Deploys are NOT part of this: Cloudflare Workers Builds deploys every
-# push to main, tagged or not. Registry auth is GitHub Actions OIDC — the
-# workflow's identity (a repo owned by MartinSA04) authorizes the
-# io.github.MartinSA04/* namespace, so there are no secrets to manage.
+# The deploy needs the CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID repo
+# secrets ("Edit Cloudflare Workers" token template). Registry auth is
+# GitHub Actions OIDC — the workflow's identity (a repo owned by
+# MartinSA04) authorizes the io.github.MartinSA04/* namespace, no secrets.
 
 on:
   push:
@@ -35,6 +36,11 @@ jobs:
       - run: npm run lint
       - run: npm run typecheck
       - run: npm test
+      - name: Deploy Worker to Cloudflare
+        run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       - name: Install mcp-publisher
         run: >
           curl -fsSL https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz

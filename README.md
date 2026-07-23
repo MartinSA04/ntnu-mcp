@@ -40,9 +40,9 @@ that browse the registry can discover it there. It is an unofficial
 community server, not affiliated with NTNU. Registry updates are
 tag-driven: `npm version <patch|minor|major> && git push --follow-tags` —
 the `version` script keeps `server.json` in sync, and the
-[release workflow](.github/workflows/release.yml) re-publishes the registry
-entry (GitHub OIDC, no secrets) and creates the GitHub Release. Deploys are
-separate: Cloudflare Workers Builds deploys every push to main.
+[release workflow](.github/workflows/release.yml) runs the check suite,
+deploys the Worker, re-publishes the registry entry (GitHub OIDC), and
+creates the GitHub Release.
 
 ## Architecture
 

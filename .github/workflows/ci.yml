@@ -1,9 +1,9 @@
 name: CI
 
-# Lint + typecheck + tests on every push and PR. Note: this does NOT gate
-# deploys — Cloudflare Workers Builds deploys main on push regardless of
-# these checks. To make a failing suite abort the deploy, set the Workers
-# Builds build command (Cloudflare dashboard) to run `npm test` first.
+# Lint + typecheck + tests on every push and PR. Deploys are tag-driven
+# through the release workflow (which re-runs these checks first); pushes
+# to main do not deploy once the Workers Builds Git integration is
+# disconnected in the Cloudflare dashboard.
 
 on:
   push:
