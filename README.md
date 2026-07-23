@@ -37,9 +37,12 @@ The server is also listed in the
 [official MCP registry](https://registry.modelcontextprotocol.io) as
 `io.github.MartinSA04/ntnu-mcp` (see [server.json](server.json)); clients
 that browse the registry can discover it there. It is an unofficial
-community server, not affiliated with NTNU. Publishing a new registry
-version: bump `version` in both `package.json` and `server.json`, then
-`mcp-publisher login github && mcp-publisher publish`.
+community server, not affiliated with NTNU. Registry updates are
+tag-driven: `npm version <patch|minor|major> && git push --follow-tags` —
+the `version` script keeps `server.json` in sync, and the
+[release workflow](.github/workflows/release.yml) re-publishes the registry
+entry (GitHub OIDC, no secrets) and creates the GitHub Release. Deploys are
+separate: Cloudflare Workers Builds deploys every push to main.
 
 ## Architecture
 

@@ -10,7 +10,8 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.test.json",
     "lint": "biome check .",
-    "fmt": "biome check --write ."
+    "fmt": "biome check --write .",
+    "version": "node scripts/sync-version.mjs && git add server.json"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",

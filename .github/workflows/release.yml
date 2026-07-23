@@ -1,0 +1,49 @@
+name: Release
+
+# Publishes the MCP registry entry and creates the GitHub Release when a
+# version tag lands. The whole release flow is: `npm version
+# <patch|minor|major>` locally (its `version` script syncs server.json),
+# then `git push --follow-tags` — this workflow does the rest.
+#
+# Deploys are NOT part of this: Cloudflare Workers Builds deploys every
+# push to main, tagged or not. Registry auth is GitHub Actions OIDC — the
+# workflow's identity (a repo owned by MartinSA04) authorizes the
+# io.github.MartinSA04/* namespace, so there are no secrets to manage.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write # create the GitHub Release
+  id-token: write # OIDC login to the MCP registry
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - name: Tag must match package.json and server.json versions
+        run: |
+          test "v$(node -p "require('./package.json').version")" = "$GITHUB_REF_NAME"
+          test "v$(node -p "require('./server.json').version")" = "$GITHUB_REF_NAME"
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - name: Install mcp-publisher
+        run: >
+          curl -fsSL https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz
+          | sudo tar -xz -C /usr/local/bin mcp-publisher
+      - name: Publish server.json to the MCP registry
+        run: |
+          mcp-publisher login github-oidc
+          mcp-publisher publish
+      - name: GitHub Release with generated notes
+        run: gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}
