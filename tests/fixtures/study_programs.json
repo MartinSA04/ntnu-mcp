@@ -1,0 +1,194 @@
+{
+ "q": "ntnu",
+ "numFound": 403,
+ "pageNr": 1,
+ "pageSize": 100000,
+ "lang": "no",
+ "types": [
+  "studyprog"
+ ],
+ "docs": [
+  {
+   "id": "studyprog_BALIT_no",
+   "url": "http://www.ntnu.no/studier/balit",
+   "type": "studyprog",
+   "title": "Allmenn litteraturvitenskap",
+   "keywords": "nordisk og litteraturvitenskap bnordlit",
+   "description": "Nordisk og litteraturvitenskap - bachelor Nordisk og litteraturvitenskap",
+   "score": 4.9108853,
+   "timeProcessed": "2026-07-24T01:49:14+0200",
+   "studyprogCode": "BALIT",
+   "studyprogName": "Allmenn litteraturvitenskap",
+   "studyprogStudyLevel": "Bachelor 3 år",
+   "studyprogStudyLevelCode": 390,
+   "studyprogCampuses": [
+    "Dragvoll"
+   ],
+   "studyprogCities": [
+    "Trondheim"
+   ],
+   "fieldOfEducationCode": "SPRÅK",
+   "fieldOfEducationName": "Språk og litteratur",
+   "fulltime": true,
+   "taughtInEnglish": false,
+   "hasAdmission": true,
+   "orgId": "1080",
+   "orgName": "Institutt for språk og litteratur",
+   "orgAcronym": "HF-ISL",
+   "orgUrl": "https://www.ntnu.no/isl",
+   "teaser": "<strong>ntnu</strong>"
+  },
+  {
+   "id": "studyprog_MTKOM_no",
+   "url": "http://www.ntnu.no/studier/mtkom",
+   "type": "studyprog",
+   "title": "Cybersikkerhet og datakommunikasjon",
+   "keywords": "cybersikkerhet og datakommunikasjon mtkom",
+   "description": "Cybersikkerhet og datakommunikasjon - master Cybersikkerhet og datakommunikasjon",
+   "score": 4.933109,
+   "timeProcessed": "2026-07-24T01:49:14+0200",
+   "studyprogCode": "MTKOM",
+   "studyprogName": "Cybersikkerhet og datakommunikasjon",
+   "studyprogStudyLevel": "Master 5 år",
+   "studyprogStudyLevelCode": 590,
+   "studyprogCampuses": [
+    "Gløshaugen"
+   ],
+   "studyprogCities": [
+    "Trondheim"
+   ],
+   "fieldOfEducationCode": "TEKNO",
+   "fieldOfEducationName": "Teknologi, sivilingeniør, ingeniør og arkitekt",
+   "fulltime": true,
+   "taughtInEnglish": false,
+   "hasAdmission": true,
+   "orgId": "831",
+   "orgName": "Institutt for informasjonssikkerhet og kommunikasjonsteknologi",
+   "orgAcronym": "IE-IIK",
+   "orgUrl": "https://www.ntnu.no/iik",
+   "teaser": "<strong>ntnu</strong>"
+  },
+  {
+   "id": "studyprog_MTDT_no",
+   "url": "http://www.ntnu.no/studier/mtdt",
+   "type": "studyprog",
+   "title": "Datateknologi",
+   "keywords": "datateknologi mtdt sivilingeniør data master datastudium programmering ingeniør siving siv ing trondheim gløshaugen kunstig intelligens databaser søk algoritmer datastrukturer programvareutvikling programvaresystemer spill spillteknologi interaksjonsdesign ntnu",
+   "description": "Datateknologi - master (5-årig) Datateknologi",
+   "score": 7.469474,
+   "timeProcessed": "2026-07-24T01:49:14+0200",
+   "studyprogCode": "MTDT",
+   "studyprogName": "Datateknologi",
+   "studyprogStudyLevel": "Master 5 år",
+   "studyprogStudyLevelCode": 590,
+   "studyprogCampuses": [
+    "Gløshaugen"
+   ],
+   "studyprogCities": [
+    "Trondheim"
+   ],
+   "fieldOfEducationCode": "TEKNO",
+   "fieldOfEducationName": "Teknologi, sivilingeniør, ingeniør og arkitekt",
+   "fulltime": true,
+   "taughtInEnglish": false,
+   "hasAdmission": true,
+   "orgId": "827",
+   "orgName": "Institutt for datateknologi og informatikk",
+   "orgAcronym": "IE-IDI",
+   "orgUrl": "https://www.ntnu.no/idi",
+   "teaser": "<strong>ntnu</strong>"
+  },
+  {
+   "id": "studyprog_PHCOS_no",
+   "url": "https://www.ntnu.no/studier/phcos",
+   "type": "studyprog",
+   "title": "Datateknologi og informatikk",
+   "keywords": "datateknologi og informatikk phcos brukergrensesnitt databaseteknikk datamaskinarkitektur grafikk kunstig intelligens informasjonssystemer operativsystemer programmering visuell databehandling bildeprosessering video prosessering systemutvikling ph d",
+   "description": "Datateknologi og informatikk - ph.d. Datateknologi og informatikk",
+   "score": 4.911218,
+   "timeProcessed": "2026-07-24T01:49:14+0200",
+   "studyprogCode": "PHCOS",
+   "studyprogName": "Datateknologi og informatikk",
+   "studyprogStudyLevel": "Ph.d.",
+   "studyprogStudyLevelCode": 980,
+   "studyprogCampuses": [
+    "Campus Gjøvik",
+    "Gløshaugen"
+   ],
+   "studyprogCities": [
+    "Gjøvik",
+    "Trondheim"
+   ],
+   "fieldOfEducationCode": "INFOTEKN",
+   "fieldOfEducationName": "Informasjonsteknologi og informatikk",
+   "fulltime": true,
+   "taughtInEnglish": false,
+   "hasAdmission": true,
+   "orgId": "827",
+   "orgName": "Institutt for datateknologi og informatikk",
+   "orgAcronym": "IE-IDI",
+   "orgUrl": "https://www.ntnu.no/idi",
+   "teaser": "<strong>ntnu</strong>"
+  },
+  {
+   "id": "studyprog_BIT_no",
+   "url": "http://www.ntnu.no/studier/bit",
+   "type": "studyprog",
+   "title": "Informatikk",
+   "keywords": "informatikk bit",
+   "description": "Informatikk - bachelor Informatikk",
+   "score": 4.933116,
+   "timeProcessed": "2026-07-24T01:49:14+0200",
+   "studyprogCode": "BIT",
+   "studyprogName": "Informatikk",
+   "studyprogStudyLevel": "Bachelor 3 år",
+   "studyprogStudyLevelCode": 390,
+   "studyprogCampuses": [
+    "Gløshaugen"
+   ],
+   "studyprogCities": [
+    "Trondheim"
+   ],
+   "fieldOfEducationCode": "INFOTEKN",
+   "fieldOfEducationName": "Informasjonsteknologi og informatikk",
+   "fulltime": true,
+   "taughtInEnglish": false,
+   "hasAdmission": true,
+   "orgId": "827",
+   "orgName": "Institutt for datateknologi og informatikk",
+   "orgAcronym": "IE-IDI",
+   "orgUrl": "https://www.ntnu.no/idi",
+   "teaser": "<strong>ntnu</strong>"
+  },
+  {
+   "id": "studyprog_MSPED_no",
+   "url": "http://www.ntnu.no/studier/msped",
+   "type": "studyprog",
+   "title": "Spesialpedagogikk",
+   "keywords": "pedagogikk mped spesialpedagog førskolelærer utdanning skole barnehage spes ped skoleverk rektor oppvekst spesialpedagogikk spesped",
+   "description": "Pedagogikk - master Pedagogikk",
+   "score": 4.984196,
+   "timeProcessed": "2026-07-24T01:49:14+0200",
+   "studyprogCode": "MSPED",
+   "studyprogName": "Spesialpedagogikk",
+   "studyprogStudyLevel": "Master 2 år",
+   "studyprogStudyLevelCode": 580,
+   "studyprogCampuses": [
+    "Dragvoll"
+   ],
+   "studyprogCities": [
+    "Trondheim"
+   ],
+   "fieldOfEducationCode": "PEDFAG",
+   "fieldOfEducationName": "Pedagogiske fag",
+   "fulltime": true,
+   "taughtInEnglish": false,
+   "hasAdmission": true,
+   "orgId": "1186",
+   "orgName": "Institutt for pedagogikk og livslang læring",
+   "orgAcronym": "SU-IPL",
+   "orgUrl": "https://www.ntnu.no/ipl",
+   "teaser": "<strong>ntnu</strong>"
+  }
+ ]
+}

@@ -2,13 +2,14 @@
 
 A remote [MCP](https://modelcontextprotocol.io) server that exposes NTNU
 (Norwegian University of Science and Technology) course data to LLM assistants; course catalog search, teaching schedules, weekly timetables, grade
-statistics, course descriptions, and exam logistics, plus two comparison
-tools for students choosing between courses.
+statistics, course descriptions, exam logistics, and study programs with
+their official study plans, plus comparison tools for students choosing
+between courses.
 Runs as a Cloudflare Worker; no installation required on the client side.
 
 ## Tools
 
-Ten tools, all read-only:
+Twelve tools, all read-only:
 
 - **`search_courses`** — free-text search of NTNU's course catalog for a given year; returns codes, names, campus, and exam dates.
 - **`get_course_schedule`** — every dated teaching activity (lectures, labs) for a course in a year, with Oslo-local times and rooms.
@@ -18,6 +19,8 @@ Ten tools, all read-only:
 - **`get_semesters`** — NTNU's terms with ids like `26h`/`26v`, teaching weeks, exam-period dates, and which term is current.
 - **`get_course_info`** — everything about a course except exam logistics: credits, level, campus, prerequisites, mandatory activities, content/learning outcomes, credit reductions, the study programs the teaching is planned for, contacts, and alert notices. English by default, `language: "nb"` for Norwegian.
 - **`get_exam_info`** — exam logistics for up to 10 courses in one call: every occasion (ordinary/re-sit) with date, start time, duration, permitted-aids code ("hjelpemiddelkode") with its meaning, exam system, and assigned rooms.
+- **`search_study_programs`** — search NTNU's ~400 study programs by text, level, and city; returns program codes for `get_study_plan`.
+- **`get_study_plan`** — the official plan for a program and cohort intake year: courses (codes, credits, mandatory/elective) per semester, with specialization choice points — the bridge from "I study X" to concrete course codes.
 - **`compare_courses`** — side-by-side comparison of several courses: name, campus, exam dates, weekly teaching hours, and latest grade distribution.
 - **`check_timetable_conflicts`** — pairwise check for weekly-schedule clashes and exam-date collisions across a set of courses, before registering for them.
 

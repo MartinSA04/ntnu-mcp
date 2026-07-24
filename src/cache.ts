@@ -47,6 +47,9 @@ export const GRADES_CACHE_TTL_MS = 24 * 60 * 60 * 1000;
  */
 export const DETAILS_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 
+/** TTL for the study-program catalog and study plans — change a few times a year. */
+export const PROGRAMS_CACHE_TTL_MS = 24 * 60 * 60 * 1000;
+
 /**
  * The slice of Cloudflare's `KVNamespace` this cache needs, typed structurally
  * so `deps.ts`/tests don't have to load `@cloudflare/workers-types` (its

@@ -18,11 +18,14 @@ import type {
   CourseSearchPage,
   GradeRow,
   ScheduleActivity,
+  StudyPlan,
+  StudyProgramSummary,
   TimetableEntry,
 } from "ntnu-api";
 import {
   DETAILS_CACHE_TTL_MS,
   GRADES_CACHE_TTL_MS,
+  PROGRAMS_CACHE_TTL_MS,
   SCHEDULE_CACHE_TTL_MS,
   SEARCH_CACHE_TTL_MS,
   TIMETABLE_CACHE_TTL_MS,
@@ -117,6 +120,33 @@ export async function cachedDetails(
   if (hit !== null) return hit === "missing" ? null : (hit as CourseDetails);
   const value = await deps.client.courses.details(courseCode, year ?? undefined, { language });
   await deps.cache.set(key, value ?? "missing", DETAILS_CACHE_TTL_MS);
+  return value;
+}
+
+/** The full study-program catalog (~400 programs), cached 24h under one key. */
+export async function cachedProgramCatalog(deps: ToolDeps): Promise<StudyProgramSummary[]> {
+  const key = JSON.stringify(["programs"]);
+  const hit = await deps.cache.get(key, PROGRAMS_CACHE_TTL_MS);
+  if (hit !== null) return hit as StudyProgramSummary[];
+  const value = await deps.client.programs.all();
+  await deps.cache.set(key, value, PROGRAMS_CACHE_TTL_MS);
+  return value;
+}
+
+/**
+ * One (program, cohort year) study plan, cached 24h. `null` results
+ * (unknown program / unpublished year) are cached as `"missing"`.
+ */
+export async function cachedStudyPlan(
+  deps: ToolDeps,
+  programCode: string,
+  year: number,
+): Promise<StudyPlan | null> {
+  const key = JSON.stringify(["studyplan", programCode.trim().toUpperCase(), year]);
+  const hit = await deps.cache.get(key, PROGRAMS_CACHE_TTL_MS);
+  if (hit !== null) return hit === "missing" ? null : (hit as StudyPlan);
+  const value = await deps.client.programs.studyPlan(programCode, year);
+  await deps.cache.set(key, value ?? "missing", PROGRAMS_CACHE_TTL_MS);
   return value;
 }
 

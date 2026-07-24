@@ -1,5 +1,5 @@
 /**
- * Registers all ten NTNU tools on an `McpServer`. Split out of `server.ts`
+ * Registers all twelve NTNU tools on an `McpServer`. Split out of `server.ts`
  * so it has zero static dependency on `agents/mcp`: that package's module
  * graph transitively does a top-level `import ... from "cloudflare:email"`
  * (dead code on our path — we use none of its email-routing features), which
@@ -17,6 +17,7 @@ import { compareCourses } from "./compare.js";
 import { checkTimetableConflicts } from "./conflicts.js";
 import { type ToolDeps, UpstreamError } from "./deps.js";
 import { getCourseInfo, getExamInfo } from "./details.js";
+import { getStudyPlan, searchStudyPrograms } from "./studyprograms.js";
 import {
   getCourseSchedule,
   getCourseVersions,
@@ -27,7 +28,7 @@ import {
 } from "./tools.js";
 
 /**
- * Registers all ten NTNU tools on `server`, delegating to the pure tool
+ * Registers all twelve NTNU tools on `server`, delegating to the pure tool
  * functions in `./tools.ts`, `./compare.ts`, and `./conflicts.ts`. Exported
  * so tests can register against a bare `McpServer` wired to fixture-backed
  * `ToolDeps`, without spinning up the Durable Object / Workers runtime.
@@ -216,6 +217,55 @@ export function registerTools(server: McpServer, deps: ToolDeps): void {
     async ({ course_codes, year, language }) => {
       try {
         return asToolResult(await getExamInfo(deps, { course_codes, year, language }));
+      } catch (err) {
+        return asToolError(err);
+      }
+    },
+  );
+
+  server.registerTool(
+    "search_study_programs",
+    {
+      description:
+        "Search NTNU's study-program catalog (~400 programs) by free text " +
+        "(name, code, keywords), study level (e.g. 'bachelor', 'master', 'ph.d'), " +
+        "and/or city (Trondheim, Gjøvik, Ålesund). Returns program codes like " +
+        "'MTDT' — the input for get_study_plan. Call this first when you only " +
+        "know a program's name.",
+      inputSchema: {
+        query: z.string().nullish(),
+        level: z.string().nullish(),
+        city: z.string().nullish(),
+      },
+    },
+    async ({ query, level, city }) => {
+      try {
+        return asToolResult(await searchStudyPrograms(deps, { query, level, city }));
+      } catch (err) {
+        return asToolError(err);
+      }
+    },
+  );
+
+  server.registerTool(
+    "get_study_plan",
+    {
+      description:
+        "The official study plan for an NTNU program and cohort intake year: " +
+        "which courses (codes, credits, mandatory/elective) belong to each " +
+        "semester, and the specialization choice points with their course groups. " +
+        "The bridge from 'I study X' to concrete course codes — feed them to " +
+        "get_weekly_timetable, check_timetable_conflicts, or get_exam_info. " +
+        "cohort_year is the year the student STARTED (defaults to the current " +
+        "cohort); students in their Nth year started N-1 years ago.",
+      inputSchema: {
+        program_code: z.string(),
+        cohort_year: z.number().int().nullish(),
+      },
+    },
+    async ({ program_code, cohort_year }) => {
+      try {
+        return asToolResult(await getStudyPlan(deps, { program_code, cohort_year }));
       } catch (err) {
         return asToolError(err);
       }
