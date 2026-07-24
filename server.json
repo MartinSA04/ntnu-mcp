@@ -3,7 +3,7 @@
   "name": "io.github.MartinSA04/ntnu-mcp",
   "title": "NTNU Courses (unofficial)",
   "description": "Unofficial NTNU course data: search, timetables, grades, course info, and exam logistics.",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "websiteUrl": "https://github.com/MartinSA04/ntnu-mcp",
   "repository": {
     "url": "https://github.com/MartinSA04/ntnu-mcp",

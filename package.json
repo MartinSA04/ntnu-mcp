@@ -1,7 +1,7 @@
 {
   "name": "ntnu-mcp",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Cloudflare Workers MCP server exposing NTNU course data",
   "type": "module",
   "scripts": {
